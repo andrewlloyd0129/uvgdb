@@ -5,7 +5,7 @@
   <%= game.id %>
  <%= link_to game.title, game_path(game) %>
  <%= game.release %>
- <%= game.description %>
+ <%= truncate(game.description) %>
  <hr>
  <% end %>
 

@@ -34,6 +34,15 @@ class GamesController < ApplicationController
     end
   end
 
+  def destroy
+    @game = Game.find(params[:id])
+    if @game.destroy
+      redirect_to games_path, notice: 'Your post was edited successfully'
+    else
+      render :show, notice: 'penis'
+    end
+  end
+
   private
 
   def games_params
