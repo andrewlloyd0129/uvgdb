@@ -9,8 +9,29 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(games_params)
-    @game.save
+   if @game.save
+      redirect_to games_path
+    else
+      render :new
+    end
 
+  end
+
+  def show
+    @game = Game.find(params[:id])
+  end
+
+  def edit
+    @game = Game.find(params[:id])
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    if @game.update(games_params)
+      redirect_to @game
+    else
+      render :edit
+    end
   end
 
   private

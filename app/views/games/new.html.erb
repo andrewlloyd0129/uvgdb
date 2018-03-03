@@ -1,13 +1,2 @@
 <h1>New Games page yo!!</h1>
-<%= form_for @game do |f| %>
-  <%= f.label :Title %>:
-  <%= f.text_field :title %><br />
-
-  <%= f.label :Release_date %>:
-  <%= f.date_field :release %><br />
-
-   <%= f.label :Description%>:
-  <%= f.text_field :description %><br />
-
-  <%= f.submit %>
-<% end %>
+ <%= render 'form' %>

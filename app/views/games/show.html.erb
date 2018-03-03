@@ -1,0 +1,7 @@
+<h1><%="Here is a game show page for  #{@game.title}!!"%></h1>
+<%= link_to "Edit Game Listing", edit_game_path %>
+
+<div>(<%= @game.release.year %>)</div>
+<div><%= @game.description %></div>
+<div><%= link_to "Back to Games", games_path %></div>
+<div><%= link_to "Home", root_path %></div>
