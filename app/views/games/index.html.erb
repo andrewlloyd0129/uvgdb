@@ -1,0 +1,12 @@
+<p>Now i have a games index!!</p>
+
+
+<% @games.each do |game| %>
+  <%= game.id %>
+ <%= link_to game.title, game_path(game) %>
+ <%= game.release %>
+ <%= truncate(game.description) %>
+ <hr>
+ <% end %>
+
+ <div><%= link_to "Create New Game", new_game_path %></div>
