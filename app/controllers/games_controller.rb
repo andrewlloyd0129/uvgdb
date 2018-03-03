@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @q = Game.search(params[:q])
+    @games = @q.result
   end
 
   def new
