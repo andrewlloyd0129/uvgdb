@@ -1,5 +1,13 @@
 <p>Now i have a games index!!</p>
 
+<%= search_form_for @q do |f| %>
+ <div class="field">
+   <%= f.label :title_cont, "Search by title" %>
+   <%= f.text_field :description_cont %>
+ </div>
+ <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
 
 <% @games.each do |game| %>
   <%= game.id %>
@@ -10,3 +18,4 @@
  <% end %>
 
  <div><%= link_to "Create New Game", new_game_path %></div>
+ <div><%= link_to "Back", games_path %></div>
