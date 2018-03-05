@@ -9,3 +9,5 @@ TODO:
 
 *Other Crap*
 - add gritter and make them show up (currently if you cannot create a new game it fails silently)
+
+*Testing Git hub right here*
