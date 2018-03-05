@@ -1,24 +1,13 @@
-# README
+TODO:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*CRUD*
+- On games show page, if game was released in past x years, add month to year
+- CRUD for Studio'
+- CRUD for Characters
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+*Other Crap*
+- add gritter and make them show up (currently if you cannot create a new game it fails silently)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Testing Git hub right here*
