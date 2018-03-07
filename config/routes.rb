@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :studios
   devise_for :users
 
   resources :games
