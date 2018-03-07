@@ -1,0 +1,9 @@
+<h2>Welcome to <%= "#{@studio.title}" %></h2>
+
+<%= link_to "Edit Studio Listing", edit_studio_path %>
+<div><%= link_to "Delete Studio Listing", @studio, method: :delete, data:  {confirm: "Are you sure you want to delete?"} %></div>
+
+<div><%= @studio.location %></div>
+<div><%= link_to "Back to Studios", studios_path %></div>
+<div><%= link_to "Home", root_path %></div>
+
