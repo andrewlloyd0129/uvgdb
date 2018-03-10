@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :characters
   resources :studios
   devise_for :users
 
