@@ -2,8 +2,11 @@ class PlatformsController < ApplicationController
     before_action :set_platform, only: [:show, :edit, :update, :destroy]
 
   def index
-    @q = Platform.search(params[:q])
-      @platforms = @q.result
+    q_param = params[:q]
+      page = params[:page]
+
+      @q = Platform.ransack q_param
+      @platforms = @q.result.page(page).per(10)
   end
   def new
     @platform = Platform.new
