@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'pages/home'
 
+  get 'pages/hiBrayden'
+
   root to: "pages#home"
 
 
