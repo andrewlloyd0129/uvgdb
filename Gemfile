@@ -56,3 +56,5 @@ gem 'acts_as_votable', '~> 0.11.1'
 gem 'gritter', '~> 1.2'
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari.git'
