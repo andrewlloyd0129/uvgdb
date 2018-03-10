@@ -9,12 +9,11 @@ TODO:
 
 
 *USERS*
-- sign in/ sign out pages
 - devise users to favorite games, add as beat story, add as beat 100%,  add to wishlist, also can submit new content - games characters etc,   you can like games (act as votable)
 - admin user (petergate) to approve any content submissions from users
 
 *Nav Bar*
-- Logo for uvgbdb
+- Logo for uvgdb
 - global serch bar
 - Drop down menu for what you are searching
 - mini nav bar for links to: Games Stusios Characters Random Page
