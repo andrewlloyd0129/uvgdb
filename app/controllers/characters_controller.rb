@@ -2,8 +2,11 @@ class CharactersController < ApplicationController
 	before_action :set_character, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@q = Character.search(params[:q])
-    	@characters = @q.result
+		q_param = params[:q]
+	    page = params[:page]
+
+	    @q = Character.ransack q_param
+	    @characters = @q.result.page(page).per(10)
 	end
 	def new
 		@character = Character.new
