@@ -1,14 +1,10 @@
 TODO:
 
 *CRUD*
-- CRUD for people
-
+- Next steps for people, probably wire them up to belong to games and studios as well as give them titles
 - wire platforms to games (so this sucks.  ask brayden wtf is going on with has and belongs to many relationships and how to use them)
 - wire characters to games
-
-- in games crud add carrierwave for photos.  One feature pic, and other pics
-
-
+- in crud for games add carrierwave for photos.  One feature pic, and other pics
 
 *USERS*
 - sign in/ sign out pages

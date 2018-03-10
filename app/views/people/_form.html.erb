@@ -1,0 +1,9 @@
+<%= form_for @people do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :bigraphy %>:
+  <%= f.text_area :bigraphy %><br />
+
+  <%= f.submit %>
+<% end %>
