@@ -20,6 +20,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @platform = Platform.where(id: @game.platforms_id)
   end
 
   def edit

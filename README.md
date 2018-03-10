@@ -2,8 +2,10 @@ TODO:
 
 *CRUD*
 - CRUD for people
-- wire platforms to games
+
+- wire platforms to games (so this sucks.  ask brayden wtf is going on with has and belongs to many relationships and how to use them)
 - wire characters to games
+
 - in games crud add carrierwave for photos.  One feature pic, and other pics
 
 
@@ -17,7 +19,7 @@ TODO:
 - Logo for uvgbdb
 - global serch bar
 - Drop down menu for what you are searching
-- mini nav bar for links to: Games Stusios Characters Random Page
+- mini nav bar for links to: Games Stusios Characters Random-Page
 
 *Other Crap*
 - page for top 10 games this week, this month, all time
@@ -26,6 +28,3 @@ TODO:
 - make it so anyome can make games, studios, characters etc but admins have to approve them.
 - create admin dashboard that shows all pending characters, studios and games that are pending approval
 - On games show page, if game was released in past x years, add month to year
-
-
-- Weston sucks cock 
