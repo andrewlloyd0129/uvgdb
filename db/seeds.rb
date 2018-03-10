@@ -5,13 +5,13 @@ end
 puts "10 games created"
 
 8.times do |this|
-  Studio.create!(title: "Paraiso Games #{this}", location: "MF AMERICA!!")
+  Studio.create!(title: "Paraiso Gameing studios #{this}", location: "MF AMERICA!!")
 end
 
 puts "8 studios created"
 
 11.times do |platform|
-  Platform.create!(name: "This platform came from seeds #{platform}", release_date: "1994-01-29", brand: "Paraiso Games")
+  Platform.create!(name: "xbox #{platform}", release_date: "1994-01-29", brand: "microsoft")
 end
 
 puts "11 platforms created"

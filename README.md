@@ -7,6 +7,7 @@ TODO:
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 
 *USERS*
+- user profile page
 - devise users to favorite games, add as beat story, add as beat 100%,  add to wishlist, also can submit new content - games characters etc,   you can like games (act as votable)
 - admin user (petergate) to approve any content submissions from users
 
@@ -14,7 +15,7 @@ TODO:
 - Logo for uvgdb
 - global serch bar
 - Drop down menu for what you are searching
-- mini nav bar for links to: Games Stusios Characters Random-Page
+- nav bar for links to: Characters Random-Page
 
 *Other Crap*
 - page for top 10 games this week, this month, all time
