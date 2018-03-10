@@ -1,0 +1,7 @@
+<% if flash[:alert] %>
+  <%= js add_gritter(flash[:alert], title: "UVGDB Alert", sticky: false, time: 1000) %>
+<% elsif flash[:error] %>
+  <%= js add_gritter(flash[:error], title: "UVGDB Error", sticky: false, time: 1000) %>
+<% else %>
+  <%= js add_gritter(flash[:notice], title: "UVGDB Notification", sticky: false, time: 1000) %>
+<% end %>
