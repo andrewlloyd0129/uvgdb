@@ -28,3 +28,6 @@ TODO:
 - make it so anyome can make games, studios, characters etc but admins have to approve them.
 - create admin dashboard that shows all pending characters, studios and games that are pending approval
 - On games show page, if game was released in past x years, add month to year
+
+
+- Weston sucks cock 
