@@ -3,7 +3,7 @@ TODO:
 *CRUD*
 - CRUD for Characters
 	- X Basic Build for CRUD compleated bu weston
-- CRUD for people
+- Next steps for people, probably wire them up to belong to games and studios as well as give them titles
 - wire platforms to games
 - wire 
 - in games crud add carrierwave for photos.  One feature pic, and other pics
