@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+
+  resources :platforms
   resources :characters
   resources :studios
+  resources :games
+  
   devise_for :users
 
-  resources :games
+
 
   get 'pages/home'
 

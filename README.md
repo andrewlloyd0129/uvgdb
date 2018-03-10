@@ -1,10 +1,11 @@
 TODO:
 
 *CRUD*
-- CRUD for platforms
 - CRUD for Characters
 	- X Basic Build for CRUD compleated bu weston
 - CRUD for people
+- wire platforms to games
+- wire 
 - in games crud add carrierwave for photos.  One feature pic, and other pics
 
 
