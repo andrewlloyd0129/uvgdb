@@ -1,9 +1,10 @@
 TODO:
 
 *CRUD*
-- CRUD for platforms
 - CRUD for Characters
 - CRUD for people
+- wire platforms to games
+- wire 
 - in games crud add carrierwave for photos.  One feature pic, and other pics
 
 
