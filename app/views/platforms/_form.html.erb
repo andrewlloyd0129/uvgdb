@@ -1,0 +1,12 @@
+<%= form_for @platform do |f| %>
+  <%= f.label :Name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :release_date, "Release Date" %>:
+  <%= f.date_field :release_date %><br />
+
+  <%= f.label :Brand %>:
+  <%= f.text_field :brand %><br />
+
+  <%= f.submit %>
+<% end %>

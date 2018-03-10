@@ -1,0 +1,11 @@
+<h2>Welcome to <%= "#{@platform.name}" %></h2>
+<div><%= @platform.release_date %></div>
+<div><%= @platform.brand %></div>
+
+
+<%= link_to "Edit Platform Listing", edit_platform_path %>
+<div><%= link_to "Delete Platform Listing", @platform, method: :delete, data:  {confirm: "Are you sure you want to delete?"} %></div>
+
+
+<div><%= link_to "Back to Platforms", platforms_path %></div>
+<div><%= link_to "Home", root_path %></div>

@@ -1,0 +1,18 @@
+<%= form_for @character do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :biography %>:
+  <%= f.text_area :biography %><br />
+
+  <%= f.label :age %>:
+  <%= f.number_field :age %><br />
+
+  <%= f.label :home_town %>:
+  <%= f.text_field :age %><br />
+
+  <%= f.label :first_appearence %>:
+  <%= f.text_field :first_appearence %><br />
+
+  <%= f.submit %>
+<% end %>
