@@ -1,7 +1,10 @@
 class GamesController < ApplicationController
   def index
-    @q = Game.search(params[:q])
-    @games = @q.result
+    q_param = params[:q]
+      page = params[:page]
+
+      @q = Game.ransack q_param
+      @games = @q.result.page(page).per(10)
   end
 
   def new
@@ -20,6 +23,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @platform = Platform.where(id: @game.platforms_id)
   end
 
   def edit

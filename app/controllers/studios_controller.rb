@@ -2,8 +2,11 @@ class StudiosController < ApplicationController
 	before_action :set_studio, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@q = Studio.search(params[:q])
-    	@studios = @q.result
+		q_param = params[:q]
+	    page = params[:page]
+
+	    @q = Studio.ransack q_param
+	    @studios = @q.result.page(page).per(10)
 	end
 	def new
 		@studio = Studio.new

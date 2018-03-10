@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :people
   resources :platforms
   resources :characters
   resources :studios
