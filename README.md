@@ -19,7 +19,7 @@ TODO:
 - Logo for uvgbdb
 - global serch bar
 - Drop down menu for what you are searching
-- mini nav bar for links to: Games Stusios Characters Random Page
+- mini nav bar for links to: Games Stusios Characters Random-Page
 
 *Other Crap*
 - page for top 10 games this week, this month, all time
