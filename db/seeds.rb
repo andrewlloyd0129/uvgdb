@@ -15,3 +15,11 @@ puts "8 studios created"
 end
 
 puts "11 platforms created"
+
+
+500.times do |i|
+	Character.create!(name: "cool character number #{i}",age: i , home_town: "PantsLand", first_appearence: "game", biography: "m ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, cool bio" )
+end
+
+puts "500 Characters created (cause why not)"
+

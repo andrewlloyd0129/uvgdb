@@ -2,6 +2,7 @@ TODO:
 
 *CRUD*
 - CRUD for Characters
+	- X Basic Build for CRUD compleated bu weston
 - CRUD for people
 - wire platforms to games
 - wire 
