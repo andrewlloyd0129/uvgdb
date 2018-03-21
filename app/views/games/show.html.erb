@@ -6,10 +6,6 @@
 <div><%= @game.description %></div>
 <div><%= link_to "Back to Games", games_path %></div>
 <div><%= link_to "Home", root_path %></div>
-<% @platform.each do |platform| %>
-  <%= platform.brand %>
-  <%= platform.name %> <br>
-  <% end %>
 
 
 <p> Own this game and want to trade it for another?  Click <%= link_to "here", pages_hiBrayden_path %> for our trading services </p>
