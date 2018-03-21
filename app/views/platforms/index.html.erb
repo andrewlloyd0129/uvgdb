@@ -1,13 +1,16 @@
 <h2>Platform Index Page</h2>
 
 <%= search_form_for @q do |f| %>
- <div class="field">
+ <div class="searchbar">
    <%= f.label :name_cont, "Search by name" %>
    <%= f.text_field :name_cont %>
+   <%= f.submit "Search" %>
  </div>
- <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
+<div><%= link_to "Clear Search", platforms_path %></div>
+ <div><%= link_to "Create New Platform", new_platform_path if logged_in?(:admin) %></div>
+<hr>
 
 <% @platforms.each do |platforms| %>
   <%= link_to platforms.name, platform_path(platforms) %>
@@ -16,9 +19,7 @@
  <hr>
 <% end %>
 
- <div><%= link_to "Create New Platform", new_platform_path %></div>
- <div><%= link_to "Clear Search", platforms_path %></div>
-<hr>
-<div><%= link_to "Home", root_path %></div>
+ 
+
 
 <%= paginate @platforms %>
