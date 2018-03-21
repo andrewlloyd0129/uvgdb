@@ -8,14 +8,20 @@
  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
-
-<% @platforms.each do |platforms| %>
-  <%= link_to platforms.name, platform_path(platforms) %>
-  <%= platforms.brand %>
-  <%= platforms.release_date %>
- <hr>
-<% end %>
-
+<table class="table">
+	<tr>
+		<th class="col-md-4"><%= sort_link @q, :name, "Name" %></th>
+		<th class="col-md-4"><%= sort_link @q, :brand, "Brand" %></th>
+		<th class="col-md-4"><%= sort_link @q, :release_date, "Release Date" %></th>
+	</tr>
+	<% @platforms.each do |platforms| %>
+	<tr>
+	  <td class="col-md-4"><%= link_to platforms.name, platform_path(platforms) %></th>
+	  <td class="col-md-4"><%= platforms.brand %></td>
+	  <td class="col-md-4"><%= platforms.release_date %></td>
+	</tr>
+	<% end %>
+</table>
  <div><%= link_to "Create New Platform", new_platform_path %></div>
  <div><%= link_to "Clear Search", platforms_path %></div>
 <hr>

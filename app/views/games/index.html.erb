@@ -10,15 +10,15 @@
 
 <table class="table">
 	<tr>
-		<th><%= sort_link @q, :title, "Game Title"  %></th>
-		<th><%= sort_link @q, :description, "Description"  %></th>
-		<th><%= sort_link @q, :release, "Release Date"  %></th>
+		<th class="col-md-4"><%= sort_link @q, :title, "Game Title"  %></th>
+		<th class="col-md-4"><%= sort_link @q, :description, "Description"  %></th>
+		<th class="col-md-4"><%= sort_link @q, :release, "Release Date"  %></th>
 	</tr>
 	<% @games.each do |game| %>
 	<tr>
-		 <td><%= link_to game.title, game_path(game) %></td>
-		 <td><%= truncate(game.description) %></td>
-		 <td><%= game.release.strftime("%B %e %Y") %></td>
+		 <td class="col-md-4"><%= link_to game.title, game_path(game) %></td>
+		 <td class="col-md-4"><%= truncate(game.description) %></td>
+		 <td class="col-md-4"><%= game.release.strftime("%B %e %Y") %></td>
 	 </tr>
 	 <% end %>
 </table>

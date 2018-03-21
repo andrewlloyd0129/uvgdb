@@ -4,17 +4,25 @@
  <div class="field">
    <%= f.label :name_cont, "Search by name" %>
    <%= f.text_field :name_cont %>
- </div>
  <div class="actions"><%= f.submit "Search" %></div>
+ </div>
 <% end %>
 
+<table class="table">
+	<tr> 
+		<th class="col-md-4"><%= sort_link @q, :id, "ID"  %>	</th>
+		<th class="col-md-4"><%= sort_link @q, :name, "Name"  %>	</th>
+		<th class="col-md-4"><%= sort_link @q, :bigraphy, "Biography"  %>	</th>
 
-<% @peoples.each do |people| %>
- <%= people.id %>
- <%= link_to people.name, person_path(people) %>
- <hr>
-<% end %>
-
+	</tr>
+	<% @peoples.each do |people| %>
+	<tr>
+	  <td class="col-md-4"><%= people.id %></td>
+	  <td class="col-md-4"><%= link_to people.name, person_path(people) %></td>
+	  <td class="col-md-4"><%= people.bigraphy %> </td>
+	</tr>
+	<% end %>
+</table>
  <div><%= link_to "Create New Peoples", new_person_path %></div>
  <div><%= link_to "Clear Search", people_path %></div>
 <hr>

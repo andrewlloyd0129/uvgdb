@@ -8,14 +8,22 @@
  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
+<table class="table">
 
-<% @characters.each do |character| %>
- <%= character.id %>
- <%= link_to character.name, character_path(character) %>
- <%= character.first_appearence %>
- <hr>
-<% end %>
+	<tr>
+		<th class="col-md-3"><%= sort_link @q, :name, "Name" %></th>
+		<th class="col-md-2"><%= sort_link @q, :first_appearence, "First Appearence" %></th>
+		<th class="col-md-6"><%= sort_link @q, :biography, "Biography" %></th>
+	</tr>
+	<% @characters.each do |character| %>
+	<tr>
+	 	<td><%= link_to character.name, character_path(character) %></td>
+	 	<td><%= character.first_appearence %></td>
+	 	<td><%= character.biography.truncate(80) %></td>
+	</tr>
+	<% end %>
 
+</table>
  <div><%= link_to "Create New Characters", new_character_path %></div>
  <div><%= link_to "Clear Search", characters_path %></div>
 <hr>

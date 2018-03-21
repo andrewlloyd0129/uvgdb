@@ -8,13 +8,18 @@
  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
-
-<% @studios.each do |studio| %>
- <%= studio.id %>
- <%= link_to studio.title, studio_path(studio) %>
- <%= studio.location %>
- <hr>
-<% end %>
+<table class="table">
+	<tr>
+		<th class="col-md-4"><%= sort_link @q, :title, "Title" %></th>
+		<th class="col-md-4"><%= sort_link @q, :location, "Location" %></th>
+	</tr>
+	<% @studios.each do |studio| %>
+	<tr>
+	 	<td class="col-md-4"><%= link_to studio.title, studio_path(studio) %></td>
+	 	<td class="col-md-4"><%= studio.location %></td>
+	</tr>
+	<% end %>
+</table>
 
  <div><%= link_to "Create New Studio", new_studio_path %></div>
  <div><%= link_to "Clear Search", studios_path %></div>
