@@ -9,8 +9,14 @@
   <li class="<%= active?(studios_path) %>">
     <%= link_to "Studios", studios_path %>
   </li>
-  <li>
+  <li class="<%= active?(characters_path) %>">
     <%= link_to "Characters", characters_path %>
+  </li>
+  <li class="<%= active?(people_path) %>">
+    <%= link_to "People", people_path %>
+  </li>
+  <li class="<%= active?(platforms_path) %>">
+    <%= link_to "Platforms", platforms_path %>
   </li>
   <li class="dropdown pull-right">
      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
