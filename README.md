@@ -25,4 +25,5 @@ TODO:
 - make it so anyome can make games, studios, characters etc but admins have to approve them.
 - create admin dashboard that shows all pending characters, studios and games that are pending approval
 - On games show page, if game was released in past x years, add month to year
-- Weston sucks cock
+- Matt sucks cock
+- Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
