@@ -1,0 +1,5 @@
+<% @gamplats.each do |gamplat| %>
+  <% @games.where(id:gamplat.game_id).each do |game| %>
+    <%= link_to "#{game.title}", game_path(game) %> 
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+<% @gamplats.each do |gamplat| %>
+  <% @platforms.where(id: gamplat.platform_id).each do |platform| %>
+    <%= link_to "#{platform.name}", platform_path(platform) %> - 
+  <% end %>
+
+<% end %>

@@ -5,7 +5,7 @@ TODO:
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Platform validation on creation for multiple platforms
-- Gamplat - Refactor platform and game views, Update game form to have a dropdown menu for gamplat
+- Gamplat - Update game form to have a dropdown menu for gamplat
 
 *USERS*
 - User profile page
