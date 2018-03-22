@@ -2,11 +2,11 @@ TODO:
 
 *CRUD*
 - Next steps for people, probably wire them up to belong to games and studios as well as give them titles
-- wire platforms to games (so this sucks.  ask brayden wtf is going on with has and belongs to many relationships and how to use them)
 -on games form, add drop down for platforms with the abilitiy to add multiple platfornms (like the add new photo button on portfolio app)
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Platform validation on creation for multiple platforms
+- Gamplat - Refactor platform and game views, Update game form to have a select box for gamplat
 
 *USERS*
 - User profile page

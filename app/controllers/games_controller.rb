@@ -25,6 +25,8 @@ class GamesController < ApplicationController
   end
 
   def show
+    @gamplats = Gamplat.where(game_id: @game.id)
+    @platforms = Platform.all
   end
 
   def edit
