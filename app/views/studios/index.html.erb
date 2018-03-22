@@ -1,13 +1,16 @@
 <h2>Studio Index Page</h2>
 
 <%= search_form_for @q do |f| %>
- <div class="field">
+ <div class="searchbar">
    <%= f.label :title_cont, "Search by title" %>
    <%= f.text_field :title_cont %>
+   <%= f.submit "Search" %>
  </div>
- <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
+<div><%= link_to "Clear Search", studios_path %></div>
+ <div><%= link_to "Create New Studio", new_studio_path if logged_in?(:admin) %></div>
+<hr>
 
 <% @studios.each do |studio| %>
  <%= studio.id %>
@@ -16,9 +19,7 @@
  <hr>
 <% end %>
 
- <div><%= link_to "Create New Studio", new_studio_path %></div>
- <div><%= link_to "Clear Search", studios_path %></div>
-<hr>
-<div><%= link_to "Home", root_path %></div>
+ 
+
 
 <%= paginate @studios %>

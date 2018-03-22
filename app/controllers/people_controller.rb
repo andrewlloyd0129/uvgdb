@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
 	before_action :set_people, only: [:show, :edit, :update, :destroy]
+	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
 		@q = Person.search(params[:q])

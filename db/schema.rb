@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312151036) do
+ActiveRecord::Schema.define(version: 20180310205607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20180312151036) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "platforms_id"
+    t.index ["platforms_id"], name: "index_games_on_platforms_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -87,4 +89,5 @@ ActiveRecord::Schema.define(version: 20180312151036) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "games", "platforms", column: "platforms_id"
 end

@@ -1,5 +1,6 @@
 class StudiosController < ApplicationController
 	before_action :set_studio, only: [:show, :edit, :update, :destroy]
+	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
 		q_param = params[:q]
