@@ -34,6 +34,10 @@ TODO:
 - Nav bar links
   • Random-Page
 
+*Ransack*
+- Figure out how to format seaching as "a to z" for text but as "old to new" for dates
+- Figure out how to search by dates...
+
 *Other Crap*
 - page for top 10 games this week, this month, all time
 - add gritter and make them show up (currently if you cannot create a new game it fails silently)
