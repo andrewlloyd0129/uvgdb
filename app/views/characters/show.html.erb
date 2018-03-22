@@ -1,11 +1,9 @@
 <h2>Welcome to <%= "#{@character.name}" %></h2>
 
-<%= link_to "Edit Charater Listing", edit_character_path %>
-<div><%= link_to "Delete Character Listing", @character, method: :delete, data:  {confirm: "Are you sure you want to delete?"} %></div>
+<%= link_to "Edit Charater", edit_character_path if logged_in?(:admin) %>
+<div><%= link_to "Delete Character", @character, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
 
 <div>Age: <%= @character.age %></div>
 <div>Home Town: <%= @character.home_town %></div>
 <div>First Appearace: <%= @character.first_appearence %></div>
 <div>Birography: <%= @character.biography %></div>
-<div><%= link_to "Back to characters", characters_path %></div>
-<div><%= link_to "Home", root_path %></div>

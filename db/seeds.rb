@@ -1,3 +1,20 @@
+User.create!(
+   email: "admin@test.com",
+   password: "asdfasdf",
+   password_confirmation: "asdfasdf",
+   roles: "admin"
+)
+
+puts "1 admin user created"
+
+User.create!(
+   email: "test@test.com",
+   password: "asdfasdf",
+   password_confirmation: "asdfasdf"
+)
+
+puts "1 regular user created"
+
 10.times do |things|
   Game.create!(title: "This game came from seeds #{things}", release: Date.today + things.days, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 end
@@ -22,4 +39,3 @@ puts "11 platforms created"
 end
 
 puts "500 Characters created (cause why not)"
-

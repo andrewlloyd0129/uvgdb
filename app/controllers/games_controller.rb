@@ -1,4 +1,7 @@
 class GamesController < ApplicationController
+
+  access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  
   def index
     q_param = params[:q]
       page = params[:page]

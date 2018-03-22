@@ -1,12 +1,16 @@
 <p>Now i have a games index!!</p>
 
 <%= search_form_for @q do |f| %>
- <div class="field">
-   <%= f.label :title_cont, "Search by title" %>
-   <%= f.text_field :description_cont %>
- </div>
- <div class="actions"><%= f.submit "Search" %></div>
+  <div class="searchbar">
+    <%= f.label :title_cont, "Search by title" %>
+    <%= f.text_field :description_cont %>
+    <%= f.submit "Search" %>
+  </div>
 <% end %>
+
+ <div><%= link_to "Clear Search", games_path %></div>
+ <div><%= link_to "Create New Game", new_game_path if logged_in?(:admin) %></div>
+ <hr>
 
 <table class="table">
 	<tr>
@@ -22,7 +26,6 @@
 	 </tr>
 	 <% end %>
 </table>
- <div><%= link_to "Create New Game", new_game_path %></div>
- <div><%= link_to "Clear Search", games_path %></div>
+
 
 <%= paginate @games %>

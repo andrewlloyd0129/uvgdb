@@ -1,5 +1,6 @@
 class CharactersController < ApplicationController
 	before_action :set_character, only: [:show, :edit, :update, :destroy]
+	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
 		q_param = params[:q]
@@ -8,9 +9,11 @@ class CharactersController < ApplicationController
 	    @q = Character.ransack q_param
 	    @characters = @q.result.page(page).per(10)
 	end
+
 	def new
 		@character = Character.new
 	end
+
 	def create
 		@character = Character.new(character_params)
 	    if @character.save
