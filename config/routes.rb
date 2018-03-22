@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  namespace :user do
+    get 'dashboard/profile'
+    get 'dashboard/admin'
+  end
+
 
   resources :people
   resources :platforms

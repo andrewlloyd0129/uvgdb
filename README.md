@@ -9,6 +9,19 @@ TODO:
 
 *USERS*
 - User profile page
+  - Account
+    • Profile Pic
+    • Bio
+    • Info
+  • Favorited
+  - Personal games
+    • Story Beaten
+    • 100% Complete
+    • Games owned but not played
+    • Wishlist
+    • Consoles owned
+  • Reviews
+  • Settings
 - Admin Dashboard page
   • Pending content for review
   • Edit users
