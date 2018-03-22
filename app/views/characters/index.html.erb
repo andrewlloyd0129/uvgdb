@@ -12,12 +12,21 @@
  <div><%= link_to "Create New Characters", new_character_path if logged_in?(:admin) %></div>
 <hr>
 
-<% @characters.each do |character| %>
- <%= character.id %>
- <%= link_to character.name, character_path(character) %>
- <%= character.first_appearence %>
- <hr>
-<% end %>
+<table class="table">
+	<tr>
+		<th class="col-md-3"><%= sort_link @q, :name, "Name" %></th>
+		<th class="col-md-2"><%= sort_link @q, :first_appearence, "First Appearence" %></th>
+		<th class="col-md-6"><%= sort_link @q, :biography, "Biography" %></th>
+	</tr>
+	<% @characters.each do |character| %>
+	<tr>
+	 	<td><%= link_to character.name, character_path(character) %></td>
+	 	<td><%= character.first_appearence %></td>
+	 	<td><%= character.biography.truncate(80) %></td>
+	</tr>
+	<% end %>
 
 
+</table>
+ 
 <%= paginate @characters %>

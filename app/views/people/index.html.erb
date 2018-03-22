@@ -4,20 +4,28 @@
  <div class="searchbar">
    <%= f.label :name_cont, "Search by name" %>
    <%= f.text_field :name_cont %>
-   <%= f.submit "Search" %>
+    <%= f.submit "Search" %>
  </div>
- 
 <% end %>
 
+<div><%= link_to "Create New Peoples", new_person_path if logged_in?(:admin) %></div>
  <div><%= link_to "Clear Search", people_path %></div>
- <div><%= link_to "Create New Peoples", new_person_path if logged_in?(:admin) %></div>
 <hr>
 
-<% @peoples.each do |people| %>
- <%= people.id %>
- <%= link_to people.name, person_path(people) %>
- <hr>
-<% end %>
+<table class="table">
+	<tr> 
+		<th class="col-md-4"><%= sort_link @q, :id, "ID"  %>	</th>
+		<th class="col-md-4"><%= sort_link @q, :name, "Name"  %>	</th>
+		<th class="col-md-4"><%= sort_link @q, :bigraphy, "Biography"  %>	</th>
 
-
+	</tr>
+	<% @peoples.each do |people| %>
+	<tr>
+	  <td class="col-md-4"><%= people.id %></td>
+	  <td class="col-md-4"><%= link_to people.name, person_path(people) %></td>
+	  <td class="col-md-4"><%= people.bigraphy %> </td>
+	</tr>
+	<% end %>
+</table>
+ 
 

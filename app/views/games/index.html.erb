@@ -11,15 +11,21 @@
  <div><%= link_to "Clear Search", games_path %></div>
  <div><%= link_to "Create New Game", new_game_path if logged_in?(:admin) %></div>
  <hr>
- 
-<% @games.each do |game| %>
-  <%= game.id %>
- <%= link_to game.title, game_path(game) %>
- <%= game.release %>
- <%= truncate(game.description) %>
- <hr>
- <% end %>
 
+<table class="table">
+	<tr>
+		<th class="col-md-4"><%= sort_link @q, :title, "Game Title"  %></th>
+		<th class="col-md-4"><%= sort_link @q, :description, "Description"  %></th>
+		<th class="col-md-4"><%= sort_link @q, :release, "Release Date"  %></th>
+	</tr>
+	<% @games.each do |game| %>
+	<tr>
+		 <td class="col-md-4"><%= link_to game.title, game_path(game) %></td>
+		 <td class="col-md-4"><%= truncate(game.description) %></td>
+		 <td class="col-md-4"><%= game.release.strftime("%B %e %Y") %></td>
+	 </tr>
+	 <% end %>
+</table>
 
 
 <%= paginate @games %>

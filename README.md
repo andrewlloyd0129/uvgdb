@@ -38,4 +38,5 @@ TODO:
 - page for top 10 games this week, this month, all time
 - add gritter and make them show up (currently if you cannot create a new game it fails silently)
 - On games show page, if game was released in past x years, add month to year
-- Weston sucks cock
+- Matt sucks cock
+- Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
