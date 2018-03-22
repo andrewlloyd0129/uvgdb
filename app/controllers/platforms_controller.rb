@@ -33,6 +33,8 @@ class PlatformsController < ApplicationController
   end
 
   def show
+    @games = Game.all
+    @gamplats = Gamplat.where(platform_id: @platform.id)
   end
 
   def destroy

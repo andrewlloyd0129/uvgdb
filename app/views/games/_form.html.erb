@@ -8,5 +8,14 @@
   <%= f.label :Description%>:
   <%= f.text_field :description %><br />
 
+  <ul>
+    <%= f.fields_for :gamplats do |gamplats_form| %>
+    <li>
+      <%= gamplats_form.label :platform_id %>
+      <%= gamplats_form.text_field :platform_id %>
+    </li>
+    <% end %>
+  </ul>
+
   <%= f.submit %>
 <% end %>
