@@ -1,11 +1,26 @@
 <h2>Studio Index Page</h2>
 
-<%= search_form_for @q do |f| %>
- <div class="searchbar">
-   <%= f.label :title_cont, "Search by title" %>
-   <%= f.text_field :title_cont %>
-   <%= f.submit "Search" %>
- </div>
+<div class="searchbar">
+	<ul class="custom-nav nav nav-pills">
+		<%= search_form_for @q do |f| %>
+		<li class="col-md-5">
+		   	<%= f.label :cont, "Search Studios" %>
+		   	<%= f.text_field :title_or_location_cont %>
+		   	<%= f.submit "Search" %>
+		</li>
+		<li class="dropdown pull-right col-md-2">
+			<a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort By<strong class="caret"></strong></a>
+			<ul class="dropdown-menu">
+				<li>
+					<%= sort_link @q, :title, "Title"%>
+				</li>
+				<li>
+					<%= sort_link @q, :location, "Location" %>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
 <% end %>
 
 <div><%= link_to "Clear Search", studios_path %></div>
@@ -14,8 +29,8 @@
 
 <table class="table">
 	<tr>
-		<th class="col-md-4"><%= sort_link @q, :title, "Title" %></th>
-		<th class="col-md-4"><%= sort_link @q, :location, "Location" %></th>
+		<th class="col-md-4">Name</th>
+		<th class="col-md-4">Location</th>
 	</tr>
 	<% @studios.each do |studio| %>
 	<tr>

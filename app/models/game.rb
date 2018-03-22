@@ -1,5 +1,10 @@
 class Game < ApplicationRecord
   validates_presence_of :release, :title, :description
 
-  # belongs_to_and_has_many :platforms
+
+  has_many :gamplats
+  has_many :platforms, through: :gamplats
+
+  accepts_nested_attributes_for :gamplats, 
+                              reject_if: lambda { |attrs| attrs['platform_id'].blank? }
 end

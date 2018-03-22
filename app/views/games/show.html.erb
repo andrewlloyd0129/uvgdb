@@ -9,3 +9,11 @@
 
 <div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
 
+
+<!-- ToDo: Refactor this crap into a partial -->
+<% @gamplats.each do |gamplat| %>
+  <% @platforms.where(id: gamplat.platform_id).each do |platform| %>
+    <%= link_to "#{platform.name}", platform_path(platform) %> - 
+  <% end %>
+
+<% end %>
