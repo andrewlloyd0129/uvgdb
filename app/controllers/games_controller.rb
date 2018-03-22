@@ -12,7 +12,6 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
-    3.times { @game.gamplats.build }
   end
 
   def create
@@ -31,7 +30,6 @@ class GamesController < ApplicationController
   end
 
   def edit
-    3.times { @game.gamplats.build }
   end
 
   def update
@@ -53,7 +51,7 @@ class GamesController < ApplicationController
   private
 
   def games_params
-    params.require(:game).permit(:title, :description, :release, gamplats_attributes: [:platform_id])
+    params.require(:game).permit(:title, :description, :release, gamplats_attributes: [:id, :platform_id, :_destroy])
   end
 
   def set_game
