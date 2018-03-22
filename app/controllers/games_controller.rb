@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-
+  before_action :set_game, only: [:show, :edit, :update, :destroy]
   access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
   
   def index
@@ -12,6 +12,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    3.times { @game.gamplats.build }
   end
 
   def create
@@ -25,15 +26,15 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
+    @gamplats = Gamplat.where(game_id: @game.id)
+    @platforms = Platform.all
   end
 
   def edit
-    @game = Game.find(params[:id])
+    3.times { @game.gamplats.build }
   end
 
   def update
-    @game = Game.find(params[:id])
     if @game.update(games_params)
       redirect_to @game
     else
@@ -42,7 +43,6 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @game = Game.find(params[:id])
     if @game.destroy
       redirect_to games_path, notice: 'Your post was edited successfully'
     else
@@ -53,7 +53,11 @@ class GamesController < ApplicationController
   private
 
   def games_params
-    params.require(:game).permit(:title, :description, :release)
+    params.require(:game).permit(:title, :description, :release, gamplats_attributes: [:platform_id])
+  end
+
+  def set_game
+    @game = Game.find(params[:id])
   end
 
 end

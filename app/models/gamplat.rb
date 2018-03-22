@@ -1,0 +1,2 @@
+class Gamplat < ApplicationRecord
+end

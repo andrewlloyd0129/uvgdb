@@ -2,11 +2,10 @@ TODO:
 
 *CRUD*
 - Next steps for people, probably wire them up to belong to games and studios as well as give them titles
-- wire platforms to games (so this sucks.  ask brayden wtf is going on with has and belongs to many relationships and how to use them)
--on games form, add drop down for platforms with the abilitiy to add multiple platfornms (like the add new photo button on portfolio app)
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Platform validation on creation for multiple platforms
+- Gamplat - Refactor platform and game views, Update game form to have a dropdown menu for gamplat
 
 *USERS*
 - User profile page
@@ -38,5 +37,5 @@ TODO:
 - page for top 10 games this week, this month, all time
 - add gritter and make them show up (currently if you cannot create a new game it fails silently)
 - On games show page, if game was released in past x years, add month to year
-- Matt sucks cock
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
+- I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
