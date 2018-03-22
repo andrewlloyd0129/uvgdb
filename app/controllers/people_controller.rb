@@ -11,6 +11,7 @@ class PeopleController < ApplicationController
 	end
 	def create
 		@people = Person.new(people_params)
+	    searchable
 	    if @people.save
 	      redirect_to people_path
 	    else
@@ -23,6 +24,8 @@ class PeopleController < ApplicationController
 	
 	def update
 	    if @people.update(people_params)
+	      searchable
+	      @people.save
 	      redirect_to @people, notice: 'Your people was edited successfully'
 	    else
 	      render :edit
@@ -45,5 +48,10 @@ class PeopleController < ApplicationController
 	end
 	def people_params
 		    params.require(:person).permit(:name, :bigraphy)
+	end
+
+	private
+	def searchable
+		@people.searchable = @people.name + @people.bigraphy
 	end
 end

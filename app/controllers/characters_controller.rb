@@ -16,6 +16,7 @@ class CharactersController < ApplicationController
 
 	def create
 		@character = Character.new(character_params)
+		searchable
 	    if @character.save
 	      redirect_to characters_path
 	    else
@@ -28,6 +29,8 @@ class CharactersController < ApplicationController
 	
 	def update
 	    if @character.update(character_params)
+				searchable
+	      @character.save
 	      redirect_to @character, notice: 'Your character was edited successfully'
 	    else
 	      render :edit
@@ -51,5 +54,7 @@ class CharactersController < ApplicationController
 	def character_params
 		    params.require(:character).permit(:name, :biography, :age, :home_town, :first_appearence)
 	end
-
+	def searchable
+		  @character.searchable = @character.name + @character.biography + @character.age.to_s + @character.home_town.to_s + @character.first_appearence 
+	end
 end

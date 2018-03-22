@@ -14,6 +14,7 @@ class StudiosController < ApplicationController
 	end
 	def create
 		@studio = Studio.new(studio_params)
+			searchable
 	    if @studio.save
 	      redirect_to studios_path
 	    else
@@ -25,6 +26,8 @@ class StudiosController < ApplicationController
 	end
 	def update
 	    if @studio.update(studio_params)
+	    	searchable
+	    	@studio.save
 	      redirect_to @studio
 	    else
 	      render :edit
@@ -36,14 +39,20 @@ class StudiosController < ApplicationController
 		if @studio.destroy
       		redirect_to studios_path, notice: 'Your studio was edited successfully'
 	    else
-	      render :show, notice: 'penis'
+	      render :show
 	    end
 	end
+
+	private
 	def set_studio
 		@studio = Studio.find(params[:id])
 	end
 	def studio_params
 		    params.require(:studio).permit(:title, :location)
+	end
+
+	def searchable
+		@studio.searchable = @studio.title + @studio.location
 	end
 
 end

@@ -17,6 +17,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(games_params)
+    searchable
    if @game.save
       redirect_to games_path
     else
@@ -36,6 +37,8 @@ class GamesController < ApplicationController
 
   def update
     if @game.update(games_params)
+      searchable
+      @game.save
       redirect_to @game
     else
       render :edit
@@ -58,6 +61,10 @@ class GamesController < ApplicationController
 
   def set_game
     @game = Game.find(params[:id])
+  end
+  
+  def searchable
+    @game.searchable = @game.title + @game.release.to_s + @game.description
   end
 
 end
