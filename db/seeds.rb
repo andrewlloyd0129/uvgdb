@@ -56,7 +56,7 @@ Platform.create!(name: "Windows", release_date: "1994-01-29", brand: "Microsoft"
 Platform.create!(name: "Android", release_date: "1994-01-29", brand: "Android")
 
 
-puts "11 platforms created"
+puts "4 platforms created"
 
 Gamplat.create!(game_id: 1, platform_id: 1)
 
