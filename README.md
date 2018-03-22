@@ -10,6 +10,19 @@ TODO:
 
 *USERS*
 - User profile page
+  - Account
+    • Profile Pic
+    • Bio
+    • Info
+  • Favorited
+  - Personal games
+    • Story Beaten
+    • 100% Complete
+    • Games owned but not played
+    • Wishlist
+    • Consoles owned
+  • Reviews
+  • Settings
 - Admin Dashboard page
   • Pending content for review
   • Edit users
@@ -40,3 +53,4 @@ TODO:
 - On games show page, if game was released in past x years, add month to year
 - Matt sucks cock
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
+- Weston sucks cock
