@@ -1,22 +1,39 @@
 <h1>Now i have a games index!!</h1>
 
-<%= search_form_for @q do |f| %>
-  <div class="searchbar">
-    <%= f.label :title_cont, "Search by title" %>
-    <%= f.text_field :description_cont %>
-    <%= f.submit "Search" %>
-  </div>
+<div class="searchbar">
+	<ul class="custom-nav nav nav-pills">
+		<%= search_form_for @q do |f| %>
+		<li class="col-md-5">
+		   	<%= f.label :cont, "Search Games" %>
+		   	<%= f.text_field :title_or_description_cont %>
+		   	<%= f.submit "Search" %>
+		</li>
+		<li class="dropdown pull-right col-md-2">
+			<a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort By<strong class="caret"></strong></a>
+			<ul class="dropdown-menu">
+				<li>
+					<%= sort_link @q, :title, "Title"%>
+				</li>
+				<li>
+					<%= sort_link @q, :description, "Description" %>
+				</li>
+				<li>
+					<%= sort_link @q, :release, "Release Date", up_arrow: '<i>New to Old</i>' %>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
 <% end %>
-
  <div><%= link_to "Clear Search", games_path %></div>
  <div><%= link_to "Create New Game", new_game_path if logged_in?(:admin) %></div>
  <hr>
 
 <table class="table">
 	<tr>
-		<th class="col-md-4"><%= sort_link @q, :title, "Game Title"  %></th>
-		<th class="col-md-4"><%= sort_link @q, :description, "Description"  %></th>
-		<th class="col-md-4"><%= sort_link @q, :release, "Release Date"  %></th>
+		<th class="col-md-4">Game Title</th>
+		<th class="col-md-4">Description</th>
+		<th class="col-md-4">Release Date</th>
 	</tr>
 	<% @games.each do |game| %>
 	<tr>
