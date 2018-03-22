@@ -1,7 +1,14 @@
 <h2>Welcome to <%= "#{@platform.name}" %></h2>
-<div><%= @platform.release_date %></div>
+<div><%= @platform.release_date.year %></div>
 <div><%= @platform.brand %></div>
 
 
 <%= link_to "Edit Platform Listing", edit_platform_path if logged_in?(:admin) %>
 <div><%= link_to "Delete Platform Listing", @platform, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
+
+
+<% @gamplats.each do |gamplat| %>
+  <% @games.where(id:gamplat.game_id).each do |game| %>
+    <%= link_to "#{game.title}", game_path(game) %> 
+  <% end %>
+<% end %>
