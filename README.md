@@ -1,10 +1,9 @@
 TODO:
 
 *CRUD*
-- Give People Titles
-- wire characters to games
 - wire people to games
 - wire people to studios
+- wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
 
