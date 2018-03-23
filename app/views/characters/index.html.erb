@@ -7,6 +7,7 @@
 		   	<%= f.text_field :searchable_cont %>
 		   	<%= f.submit "Search" %>
 		</li>
+		<% end %>
 		<li class="dropdown pull-right col-md-2">
 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort By<strong class="caret"></strong></a>
 			<ul class="dropdown-menu">
@@ -20,7 +21,6 @@
 		</li>
 	</ul>
 </div>
-<% end %>
  <div><%= link_to "Clear Search", characters_path %></div>
  <div><%= link_to "Create New Characters", new_character_path if logged_in?(:admin) %></div>
 <hr>
