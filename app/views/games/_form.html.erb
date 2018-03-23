@@ -8,13 +8,15 @@
   <%= f.label :Description%>:
   <%= f.text_field :description %><br />
 
-  <ul>
-    <%= f.fields_for :gamplats do |gamplats_form| %>
-    <li>
-      <%= gamplats_form.label :platform_id %>
-      <%= gamplats_form.text_field :platform_id %>
-    </li>
-    <% end %>
-  </ul>
+
+  <%= f.fields_for :gamplats do |gamplats_form| %>
+    <%= render 'gamplat_fields', f: gamplats_form %>
+  <% end %>
+
+  <div>
+    <%= link_to_add_association 'Add New Platform', f, :gamplats %>
+  </div>
+
+
   <%= f.submit %>
 <% end %>

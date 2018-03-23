@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :favorite, :unfavorite, :like, :unlike, :dislike, :undislike]
   access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
   
   def index
@@ -12,7 +12,6 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
-    3.times { @game.gamplats.build }
   end
 
   def create
@@ -32,7 +31,6 @@ class GamesController < ApplicationController
   end
 
   def edit
-    3.times { @game.gamplats.build }
   end
 
   def update
@@ -53,10 +51,40 @@ class GamesController < ApplicationController
     end
   end
 
+  def favorite
+    @game.liked_by current_user, :vote_scope => 'favorite'
+    redirect_to @game
+  end
+
+  def unfavorite
+    @game.unliked_by current_user, :vote_scope => 'favorite'
+    redirect_to @game
+  end
+
+  def like
+    @game.liked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+
+  def unlike
+    @game.unliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+
+  def dislike
+    @game.disliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+  
+  def undislike
+    @game.undisliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+
   private
 
   def games_params
-    params.require(:game).permit(:title, :description, :release, gamplats_attributes: [:platform_id])
+    params.require(:game).permit(:title, :description, :release, gamplats_attributes: [:id, :platform_id, :_destroy])
   end
 
   def set_game
