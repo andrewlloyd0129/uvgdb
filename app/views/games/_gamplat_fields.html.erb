@@ -1,5 +1,6 @@
 <div class="form-group nested-fields">
-  <%= f.label :platform_id %>
-  <%=  f.collection_select :platform_id, class: 'form-control' %>
+  <%= f.label "Platform" %>
+  <%= f.collection_select(:platform_id, Platform.all, :id, :name) %>
   <%= link_to_remove_association 'Remove Platform', f %>
 </div>
+

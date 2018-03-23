@@ -5,7 +5,7 @@ TODO:
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Platform validation on creation for multiple platforms
-- Gamplat - Update game form to have a dropdown menu for gamplat
+- Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
 
 *USERS*
 - User profile page
