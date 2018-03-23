@@ -1,7 +1,6 @@
 <h1><%="Here is a game show page for  #{@game.title}!!"%></h1>
 <%= link_to "Edit Game Listing", edit_game_path if logged_in?(:admin) %>
 <div><%= link_to "Delete Game Listing", @game, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
-
 <div>(<%= @game.release.year %>)</div>
 <div><%= @game.description %></div>
 
@@ -9,11 +8,6 @@
 
 <div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
 
-
-<!-- ToDo: Refactor this crap into a partial -->
-<% @gamplats.each do |gamplat| %>
-  <% @platforms.where(id: gamplat.platform_id).each do |platform| %>
-    <%= link_to "#{platform.name}", platform_path(platform) %> - 
-  <% end %>
-
-<% end %>
+<div>
+  <%= render 'platforms' %>
+</div>

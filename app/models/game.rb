@@ -6,5 +6,6 @@ class Game < ApplicationRecord
   has_many :platforms, through: :gamplats
 
   accepts_nested_attributes_for :gamplats, 
+                                allow_destroy: true,
                               reject_if: lambda { |attrs| attrs['platform_id'].blank? }
 end
