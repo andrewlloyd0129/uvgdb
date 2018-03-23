@@ -14,6 +14,7 @@ class PlatformsController < ApplicationController
   end
   def create
     @platform = Platform.new(platform_params)
+      searchable
       if @platform.save
         redirect_to platforms_path
       else
@@ -26,6 +27,8 @@ class PlatformsController < ApplicationController
 
   def update
       if @platform.update(platform_params)
+        searchable
+        @platform.save
         redirect_to @platform, notice: 'Your platform was edited successfully'
       else
         render :edit, notice: 'Your platform was not edited successfully'
@@ -52,6 +55,10 @@ class PlatformsController < ApplicationController
 
     def platform_params
           params.require(:platform).permit(:name, :release_date, :brand)
+    end
+
+    def searchable
+      @platform.searchable = @platform.name + @platform.release_date.to_s + @platform.brand 
     end
 
 end

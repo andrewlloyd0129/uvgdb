@@ -5,7 +5,7 @@
 		<%= search_form_for @q do |f| %>
 		<li class="col-md-5">
 		   	<%= f.label :cont, "Search Games" %>
-		   	<%= f.text_field :title_or_description_cont %>
+		   	<%= f.text_field :searchable_cont %>
 		   	<%= f.submit "Search" %>
 		</li>
 		<li class="dropdown pull-right col-md-2">
