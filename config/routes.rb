@@ -10,7 +10,16 @@ Rails.application.routes.draw do
   resources :platforms
   resources :characters
   resources :studios
-  resources :games
+  resources :games do
+    member do
+      put "favorite" => "games#favorite"
+      put "unfavorite" => "games#unfavorite"
+      put "like" => "games#like"
+      put "unlike" => "games#unlike"
+      put "dislike" => "games#dislike"
+      put "undislike" => "games#undislike"
+    end
+  end
   
   devise_for :users
 

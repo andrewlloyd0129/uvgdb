@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :favorite, :unfavorite, :like, :unlike, :dislike, :undislike]
   access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
   
   def index
@@ -48,6 +48,36 @@ class GamesController < ApplicationController
     else
       render :show, notice: 'penis'
     end
+  end
+
+  def favorite
+    @game.liked_by current_user, :vote_scope => 'favorite'
+    redirect_to @game
+  end
+
+  def unfavorite
+    @game.unliked_by current_user, :vote_scope => 'favorite'
+    redirect_to @game
+  end
+
+  def like
+    @game.liked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+
+  def unlike
+    @game.unliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+
+  def dislike
+    @game.disliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
+  end
+  
+  def undislike
+    @game.undisliked_by current_user, :vote_scope => 'liked'
+    redirect_to @game
   end
 
   private
