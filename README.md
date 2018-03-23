@@ -47,8 +47,7 @@ TODO:
   • Random-Page
 
 *Ransack*
-- Figure out how to format seaching as "a to z" for text but as "old to new" for dates
-- Figure out how to search by dates...
+- Build out custom search feature and replace ransack
 
 *Other Crap*
 - page for top 10 games this week, this month, all time
@@ -56,4 +55,12 @@ TODO:
 - On games show page, if game was released in past x years, add month to year
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
 - I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
-- Weston suck cock
+- Matt suck cock
+
+*Fan Art*
+- Fan art section on Games
+  - Build out CRUD for fan arts
+    •fan arts should have an image
+    •should have creator/artist as well as a link for the creator/artist webpage
+  - Build out gamplats for fan arts to games
+  - fan arts should be approved by an admin to avoid explicit content
