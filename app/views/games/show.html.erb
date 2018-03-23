@@ -4,6 +4,29 @@
 <div>(<%= @game.release.year %>)</div>
 <div><%= @game.description %></div>
 
+<br>
+<% if current_user.voted_up_on? @game, :vote_scope => 'favorite' %>
+  <%= link_to "unFavorite", unfavorite_game_path(@game), method: :put %>
+<% else %>
+  <%= link_to "Favorite", favorite_game_path(@game), method: :put %>
+<% end %>
+<br>
+
+<% if current_user.liked? @game, :vote_scope => 'liked' %>
+  <%= link_to "unlike", unlike_game_path(@game), method: :put %>
+<% else %>
+  <%= link_to "like", like_game_path(@game), method: :put %>
+<% end %>
+
+<span><%= @game.get_likes(:vote_scope => 'liked').size %></span>
+
+<% if current_user.disliked? @game, :vote_scope => 'liked' %>
+  <%= link_to "undislike", undislike_game_path(@game), method: :put %>
+<% else %>
+  <%= link_to "dislike", dislike_game_path(@game), method: :put %>
+<% end %>
+<span><%= @game.get_dislikes(:vote_scope => 'liked').size %></span>
+
 <hr>
 
 <div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>

@@ -1,4 +1,6 @@
 class Game < ApplicationRecord
+
+  acts_as_votable
   validates_presence_of :release, :title, :description
 
 
