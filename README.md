@@ -56,3 +56,4 @@ TODO:
 - On games show page, if game was released in past x years, add month to year
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
 - I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
+- Weston suck cock
