@@ -1,11 +1,17 @@
 <h2>Welcome to <%= "#{@platform.name}" %></h2>
-<div><%= @platform.release_date.year %></div>
-<div><%= @platform.brand %></div>
-
 
 <%= link_to "Edit Platform Listing", edit_platform_path if logged_in?(:admin) %>
 <div><%= link_to "Delete Platform Listing", @platform, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
 
-<div>
-  <%= render 'games' %>
-</div>
+<div><%= @platform.release_date.year %></div>
+<div><%= @platform.brand %></div>
+<div><%= render 'games' %></div>
+
+<% if logged_in?(:user) %>
+  <%= render 'shared/votable', thing: @platform, subpath: 'platform' %>
+<% else %>
+  <%= render 'shared/votelogin', thing: @platform %>
+<% end %>
+
+
+

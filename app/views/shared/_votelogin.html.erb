@@ -1,0 +1,13 @@
+<br>
+<%= link_to 'Favorite', new_user_session_path %>
+<br>
+
+<%= link_to 'Like', new_user_session_path %>
+
+<span><%= thing.get_likes(:vote_scope => 'liked').size %></span>
+
+<%= link_to 'Dislike', new_user_session_path %>
+
+<span><%= thing.get_dislikes(:vote_scope => 'liked').size %></span>
+
+<hr>

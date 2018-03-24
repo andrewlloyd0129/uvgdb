@@ -5,4 +5,10 @@
 
 <div><%= @studio.location %></div>
 
+<% if logged_in?(:user) %>
+  <%= render 'shared/votable', thing: @studio, subpath: 'studio' %>
+<% else %>
+  <%= render 'shared/votelogin', thing: @studio %>
+<% end %>
+
 
