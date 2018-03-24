@@ -26,13 +26,11 @@ TODO:
   • Pending content for review
   • Edit users
 - Users can add games as:
-  • Favorited
   • Story Beaten
   • 100% Complete
   • Owned but not played
   • Wishlist
 - Users can submit new content for review by admin - games characters etc
-- Users can like/dislike games (act as votable)
 - Admin user to approve any content submissions from users
 
 *Nav Bar*
