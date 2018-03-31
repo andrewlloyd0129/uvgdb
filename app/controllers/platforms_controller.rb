@@ -1,5 +1,5 @@
 class PlatformsController < ApplicationController
-    before_action :set_platform, only: [:show, :edit, :update, :destroy]
+    before_action :set_thing, only: [:show, :edit, :update, :destroy]
     access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
@@ -49,7 +49,7 @@ class PlatformsController < ApplicationController
   end
   private
 
-    def set_platform
+    def set_thing
       @platform = Platform.find(params[:id])
     end
 

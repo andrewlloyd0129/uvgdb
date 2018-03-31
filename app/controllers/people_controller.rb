@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-	before_action :set_people, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
@@ -43,7 +43,7 @@ class PeopleController < ApplicationController
 	    end
 	end
 
-	def set_people
+	def set_thing
 		@people = Person.find(params[:id])
 	end
 	def people_params

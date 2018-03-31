@@ -1,0 +1,2 @@
+class GlobalSearch < ApplicationRecord
+end

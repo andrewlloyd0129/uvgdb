@@ -27,13 +27,11 @@ TODO:
   • Pending content for review
   • Edit users
 - Users can add games as:
-  • Favorited
   • Story Beaten
   • 100% Complete
   • Owned but not played
   • Wishlist
 - Users can submit new content for review by admin - games characters etc
-- Users can like/dislike games (act as votable)
 - Admin user to approve any content submissions from users
 
 *Nav Bar*
@@ -48,8 +46,7 @@ TODO:
   • Random-Page
 
 *Ransack*
-- Figure out how to format seaching as "a to z" for text but as "old to new" for dates
-- Figure out how to search by dates...
+- Build out custom search feature and replace ransack
 
 *Styles*
 - We should probably figure this out sooner than later
@@ -60,3 +57,13 @@ TODO:
 - On games show page, if game was released in past x years, add month to year
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
 - I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
+
+
+*Fan Art*
+- Fan art section on Games
+  - Build out CRUD for fan arts
+    •fan arts should have an image
+    •should have creator/artist as well as a link for the creator/artist webpage
+  - Build out gamplats for fan arts to games
+  - fan arts should be approved by an admin to avoid explicit content
+

@@ -1,0 +1,25 @@
+<br>
+
+<% if current_user.voted_up_on? thing, :vote_scope => 'favorite' %>
+  <%= link_to "unFavorite", send("unfavorite_#{subpath}_path"), method: :put %>
+<% else %>
+  <%= link_to "Favorite", send("favorite_#{subpath}_path"), method: :put %>
+<% end %>
+<br>
+
+<% if current_user.liked? thing, :vote_scope => 'liked' %>
+  <%= link_to "unlike", send("unlike_#{subpath}_path"), method: :put %>
+<% else %>
+  <%= link_to "Like", send("like_#{subpath}_path"), method: :put %>
+<% end %>
+
+<span><%= thing.get_likes(:vote_scope => 'liked').size %></span>
+
+<% if current_user.disliked? thing, :vote_scope => 'liked' %>
+  <%= link_to "undislike", send("undislike_#{subpath}_path"), method: :put %>
+<% else %>
+  <%= link_to "Dislike", send("dislike_#{subpath}_path"), method: :put %>
+<% end %>
+<span><%= thing.get_dislikes(:vote_scope => 'liked').size %></span>
+
+<hr>

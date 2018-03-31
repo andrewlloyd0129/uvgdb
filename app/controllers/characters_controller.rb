@@ -1,5 +1,5 @@
 class CharactersController < ApplicationController
-	before_action :set_character, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
 	    end
 	end
 
-	def set_character
+	def set_thing
 		@character = Character.find(params[:id])
 	end
 	def character_params
