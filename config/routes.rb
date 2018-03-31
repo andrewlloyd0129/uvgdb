@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :global_searches
   namespace :user do
     get 'dashboard/profile'
     get 'dashboard/admin'

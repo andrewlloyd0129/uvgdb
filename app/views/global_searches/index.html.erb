@@ -1,0 +1,14 @@
+<%= search_form @q do |f| %>
+		<li class="col-md-5">
+		   	<%= f.label :cont, "Search Characters" %>
+		   	<%= f.text_field :searchable_cont %>
+		   	<%= f.submit "Search" %>
+		</li>
+<% end %>
+
+<% @searchResults.each do |result| %>
+	<tr>
+	 	<td><%= result.inspect %></td>
+	</tr>
+<% end %>
+<%= @q.inspect  %>
