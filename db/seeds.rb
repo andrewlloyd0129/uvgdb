@@ -65,8 +65,12 @@ Game.create!(	title: "PUBG",
 	     		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	     		searchable: "PUBG#{Date.today}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
+Game.create!( title: "Solitare", 
+          release: Date.today, 
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          searchable: "PUBG#{Date.today}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
-puts "5 games created"
+puts "6 games created"
 
 
 
@@ -90,8 +94,8 @@ Platform.create!(	name: "Android",
 					brand: "Google",
 					searchable: "Android1992-08-17Goolge")
 
-
 puts "4 platforms created"
+
 
 Gamplat.create!(game_id: 1, platform_id: 1)
 
@@ -114,3 +118,59 @@ Gamplat.create!(game_id: 5, platform_id: 3)
 Gamplat.create!(game_id: 5, platform_id: 4)
 
 puts "10 gamplats created"
+
+
+
+Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd")
+
+Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay")
+
+Person.create!(name: "Matthew Read", bigraphy: "I guess he is alright.  The favorites and likes are pretty cool", searchable: "Matthew ReadI guess he is alright.  The favorites and likes are pretty cool")
+
+Person.create!(name: "Kenzie Lloyd", bigraphy: "I married her once", searchable: "I married her onceKenzie Lloyd")
+
+Person.create!(name: "N/A", bigraphy: "If weston lonely this would be for his boyfriend", searchable: "N/AIf weston lonely this would be for his boyfriend")
+
+Person.create!(name: "Becca", bigraphy: "Matt and becca sitting in a tree K. I. S. S. I. N. G.", searchable: "BeccaMatt and becca sitting in a tree K. I. S. S. I. N. G.")
+
+puts "6 people created"
+
+
+
+Gample.create!(game_id: 1, people_id: 1, role: "placeholder")
+
+Gample.create!(game_id: 1, people_id: 4, role: "placeholder")
+
+Gample.create!(game_id: 2, people_id: 2, role: "placeholder")
+
+Gample.create!(game_id: 2, people_id: 5, role: "placeholder")
+
+Gample.create!(game_id: 3, people_id: 3, role: "placeholder")
+
+Gample.create!(game_id: 3, people_id: 6, role: "placeholder")
+
+Gample.create!(game_id: 4, people_id: 1, role: "placeholder")
+
+Gample.create!(game_id: 4, people_id: 2, role: "placeholder")
+
+Gample.create!(game_id: 4, people_id: 3, role: "placeholder")
+
+Gample.create!(game_id: 5, people_id: 4, role: "placeholder")
+
+Gample.create!(game_id: 5, people_id: 5, role: "placeholder")
+
+Gample.create!(game_id: 5, people_id: 6, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 1, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 2, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 3, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 4, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 5, role: "placeholder")
+
+Gample.create!(game_id: 6, people_id: 6, role: "placeholder")
+
+puts "I really hate how we have to do the seeds for these relations...   Ps, here is 18 gamples"

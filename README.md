@@ -1,10 +1,11 @@
 TODO:
 
 *CRUD*
-- Next steps for people, probably wire them up to belong to games and studios as well as give them titles
+- gample
+  • put people on games and games on people
+- wire people to studios
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
-- Platform validation on creation for multiple platforms
 - Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
 
 *USERS*
@@ -47,13 +48,16 @@ TODO:
 *Ransack*
 - Build out custom search feature and replace ransack
 
+*Styles*
+- We should probably figure this out sooner than later
+
 *Other Crap*
 - page for top 10 games this week, this month, all time
 - add gritter and make them show up (currently if you cannot create a new game it fails silently)
 - On games show page, if game was released in past x years, add month to year
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
 - I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
-- Matt suck cock
+
 
 *Fan Art*
 - Fan art section on Games
@@ -62,3 +66,4 @@ TODO:
     •should have creator/artist as well as a link for the creator/artist webpage
   - Build out gamplats for fan arts to games
   - fan arts should be approved by an admin to avoid explicit content
+
