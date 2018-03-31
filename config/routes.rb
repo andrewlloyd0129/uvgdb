@@ -6,10 +6,47 @@ Rails.application.routes.draw do
   end
 
 
-  resources :people
-  resources :platforms
-  resources :characters
-  resources :studios
+  resources :people do
+    member do
+      put "favorite" => "people#favorite"
+      put "unfavorite" => "people#unfavorite"
+      put "like" => "people#like"
+      put "unlike" => "people#unlike"
+      put "dislike" => "people#dislike"
+      put "undislike" => "people#undislike"
+    end
+  end
+  resources :platforms do
+    member do
+      put "favorite" => "platforms#favorite"
+      put "unfavorite" => "platforms#unfavorite"
+      put "like" => "platforms#like"
+      put "unlike" => "platforms#unlike"
+      put "dislike" => "platforms#dislike"
+      put "undislike" => "platforms#undislike"
+    end
+  end
+  resources :characters do
+    member do
+      put "favorite" => "characters#favorite"
+      put "unfavorite" => "characters#unfavorite"
+      put "like" => "characters#like"
+      put "unlike" => "characters#unlike"
+      put "dislike" => "characters#dislike"
+      put "undislike" => "characters#undislike"
+    end
+  end
+  resources :studios do
+    member do
+      put "favorite" => "studios#favorite"
+      put "unfavorite" => "studios#unfavorite"
+      put "like" => "studios#like"
+      put "unlike" => "studios#unlike"
+      put "dislike" => "studios#dislike"
+      put "undislike" => "studios#undislike"
+    end
+  end
+
   resources :games do
     member do
       put "favorite" => "games#favorite"

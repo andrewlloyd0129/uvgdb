@@ -7,3 +7,9 @@
 <div>Home Town: <%= @character.home_town %></div>
 <div>First Appearace: <%= @character.first_appearence %></div>
 <div>Birography: <%= @character.biography %></div>
+
+<% if logged_in?(:user) %>
+  <%= render 'shared/votable', thing: @character, subpath: 'character' %>
+<% else %>
+  <%= render 'shared/votelogin', thing: @character %>
+<% end %>

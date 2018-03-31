@@ -1,5 +1,5 @@
 class StudiosController < ApplicationController
-	before_action :set_studio, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
@@ -44,7 +44,7 @@ class StudiosController < ApplicationController
 	end
 
 	private
-	def set_studio
+	def set_thing
 		@studio = Studio.find(params[:id])
 	end
 	def studio_params
