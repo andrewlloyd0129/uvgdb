@@ -174,3 +174,5 @@ Gample.create!(game_id: 6, people_id: 5, role: "placeholder")
 Gample.create!(game_id: 6, people_id: 6, role: "placeholder")
 
 puts "I really hate how we have to do the seeds for these relations...   Ps, here is 18 gamples"
+
+puts "Weston sucks cock"
