@@ -1,3 +1,4 @@
 class Gample < ApplicationRecord
-  validates_presence_of :role
+  has_many :games
+  has_many :people
 end
