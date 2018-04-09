@@ -14,6 +14,9 @@ class Game < ApplicationRecord
   has_many :gamplats
   has_many :platforms, through: :gamplats
 
+  has_many :characters_games
+  has_many :characters, through: :characters_games
+
   mount_uploader :main_image, ImagesUploader
 
   accepts_nested_attributes_for :gamplats, 
