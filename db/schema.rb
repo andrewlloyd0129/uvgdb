@@ -50,9 +50,13 @@ ActiveRecord::Schema.define(version: 20180406162229) do
     t.integer "person_id"
     t.string "role"
     t.string "link"
+
+    t.index ["game_id", "people_id"], name: "index_gamples_on_game_id_and_people_id"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id", "person_id"], name: "index_gamples_on_game_id_and_person_id"
+
   end
 
   create_table "global_searches", force: :cascade do |t|

@@ -26,6 +26,7 @@ TODO:
     • Consoles owned
   • Reviews
   • Settings
+- Badges
 - Admin Dashboard page
   • Pending content for review
     - two parts, one submitted resubmitions
