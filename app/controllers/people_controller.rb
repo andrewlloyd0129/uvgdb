@@ -33,6 +33,8 @@ class PeopleController < ApplicationController
 	end
 
 	def show
+		@gamples = Gample.all 
+		@peoples = Person.all
 	end
 	
 	def destroy
