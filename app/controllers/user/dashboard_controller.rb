@@ -1,6 +1,6 @@
 class User::DashboardController < ApplicationController
   
-access user: {except: [:admin]}
+access admin: [:profile, :admin], user: {except: [:admin]}
 
   def profile
   
