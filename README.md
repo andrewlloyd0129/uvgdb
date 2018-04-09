@@ -23,6 +23,7 @@ TODO:
     • Consoles owned
   • Reviews
   • Settings
+- Badges
 - Admin Dashboard page
   • Pending content for review
   • Edit users
