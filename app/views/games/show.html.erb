@@ -4,6 +4,7 @@
 <div>(<%= @game.release.year %>)</div>
 <div><%= render 'platforms' %></div>
 <div><%= @game.description %></div>
+<div> <%= image_tag(img(@game.main_image, 'main'), size: "350x500") %></div>
 
 <br>
 

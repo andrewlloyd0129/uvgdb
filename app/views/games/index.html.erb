@@ -31,15 +31,17 @@
 
 <table class="table">
 	<tr>
-		<th class="col-md-4">Game Title</th>
-		<th class="col-md-4">Description</th>
-		<th class="col-md-4">Release Date</th>
+		<th class="col-md-1"></th>
+		<th class="col-md-2">Game Title</th>
+		<th class="col-md-7">Description</th>
+		<th class="col-md-2">Release Date</th>
 	</tr>
 	<% @games.each do |game| %>
 	<tr>
-		 <td class="col-md-4"><%= link_to game.title, game_path(game) %></td>
-		 <td class="col-md-4"><%= truncate(game.description) %></td>
-		 <td class="col-md-4"><%= game.release.strftime("%B %e %Y") %></td>
+		 <td class="col-md-1"><%= image_tag(img(game.main_image, 'thumb'), size: "70x100") %></td>
+		 <td class="col-md-2"><%= link_to game.title, game_path(game) %></td>
+		 <td class="col-md-7"><%= truncate(game.description) %></td>
+		 <td class="col-md-2"><%= game.release.strftime("%B %e %Y") %></td>
 	 </tr>
 	 <% end %>
 </table>
