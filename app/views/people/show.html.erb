@@ -11,17 +11,11 @@
   <%= render 'shared/votelogin', thing: @people %>
 <% end %>
 
-
-<% @peoples.each do |person| %>
-  <%= person.id %>
-  <%= person.name %>
-  <hr>
-<% end %>
+<h3>Games worked on:</h3>
 
 <% @gamples.each do |gample| %>
-  game - <%= gample.game_id %>
-  person - <%= gample.person_id %>
-  <hr>
-  </html>
-<% end %>
+  <% @games.where(id: gample.game_id).each do |game| %>
+    <%= game.title %>
 
+  <% end %>
+<% end %>

@@ -2,7 +2,8 @@ TODO:
 
 *CRUD*
 - gample
-  • put people on games and games on people
+  • add some sort of form to make gamples
+  • add roles to games/links on people and games
 - wire people to studios
 - wire characters to games
 - in crud for games add carrierwave for photos.  One feature pic, and other pics

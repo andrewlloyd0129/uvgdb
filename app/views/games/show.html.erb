@@ -14,3 +14,8 @@
 <div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
 
 
+<% @gamples.each do |gample| %>
+  <% @peoples.where(id: gample.person_id).each do |people| %>
+    <%= people.name %> - 
+  <% end %>
+<% end %>

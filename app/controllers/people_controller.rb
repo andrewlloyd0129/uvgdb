@@ -33,8 +33,8 @@ class PeopleController < ApplicationController
 	end
 
 	def show
-		@gamples = Gample.all 
-		@peoples = Person.all
+		@gamples = Gample.where(person_id: @people.id)
+		@games = Game.all
 	end
 	
 	def destroy
