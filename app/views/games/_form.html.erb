@@ -6,7 +6,10 @@
   <%= f.date_field :release %><br />
 
   <%= f.label :Description%>:
-  <%= f.text_field :description %><br />
+  <%= f.text_field :description %><br />  
+
+  <%= f.label :Main_Image%>:
+  <%= f.file_field :main_image %><br />
 
 
   <%= f.fields_for :gamplats do |gamplats_form| %>

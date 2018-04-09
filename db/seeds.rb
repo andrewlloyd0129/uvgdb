@@ -121,7 +121,7 @@ puts "10 gamplats created"
 
 
 
-Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd")
+Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd gay")
 
 Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay")
 
