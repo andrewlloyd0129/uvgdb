@@ -3,10 +3,19 @@
 <%= link_to "Edit Charater Listing", edit_person_path if logged_in?(:admin) %>
 <div><%= link_to "Delete People Listing", @people, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
 
-<div>Birography: <%= @people.bigraphy %></div>
+<div>Biography: <%= @people.bigraphy %></div>
 
 <% if logged_in?(:user) %>
   <%= render 'shared/votable', thing: @people, subpath: 'person' %>
 <% else %>
   <%= render 'shared/votelogin', thing: @people %>
+<% end %>
+
+<h3>Games worked on:</h3>
+
+<% @gamples.each do |gample| %>
+  <% @games.where(id: gample.game_id).each do |game| %>
+    <%= game.title %>
+
+  <% end %>
 <% end %>

@@ -6,12 +6,21 @@
 <div><%= @game.description %></div>
 <div> <%= image_tag(img(@game.main_image, 'main'), size: "350x500") %></div>
 
+<br>
+
+<div>
 <% if logged_in?(:user) %>
   <%= render 'shared/votable', thing: @game, subpath: 'game' %>
 <% else %>
   <%= render 'shared/votelogin', thing: @game %>
 <% end %>
+</div>
 
 <div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
 
 
+<% @gamples.each do |gample| %>
+  <% @peoples.where(id: gample.person_id).each do |people| %>
+    <%= people.name %> - 
+  <% end %>
+<% end %>
