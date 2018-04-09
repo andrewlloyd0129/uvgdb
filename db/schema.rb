@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331175258) do
+ActiveRecord::Schema.define(version: 20180406162229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(version: 20180331175258) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "platforms_id"
     t.text "searchable"
+    t.index ["platforms_id"], name: "index_games_on_platforms_id"
   end
 
   create_table "gamplats", force: :cascade do |t|
@@ -45,12 +47,16 @@ ActiveRecord::Schema.define(version: 20180331175258) do
 
   create_table "gamples", force: :cascade do |t|
     t.integer "game_id"
-    t.integer "people_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "person_id"
     t.string "role"
     t.string "link"
+
     t.index ["game_id", "people_id"], name: "index_gamples_on_game_id_and_people_id"
+
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id", "person_id"], name: "index_gamples_on_game_id_and_person_id"
+
   end
 
   create_table "global_searches", force: :cascade do |t|
@@ -115,4 +121,5 @@ ActiveRecord::Schema.define(version: 20180331175258) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "games", "platforms", column: "platforms_id"
 end

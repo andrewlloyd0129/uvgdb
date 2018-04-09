@@ -137,41 +137,41 @@ puts "6 people created"
 
 
 
-Gample.create!(game_id: 1, people_id: 1, role: "placeholder")
+Gample.create!(game_id: 1, person_id: 1, role: "placeholder")
 
-Gample.create!(game_id: 1, people_id: 4, role: "placeholder")
+Gample.create!(game_id: 1, person_id: 4, role: "placeholder")
 
-Gample.create!(game_id: 2, people_id: 2, role: "placeholder")
+Gample.create!(game_id: 2, person_id: 2, role: "placeholder")
 
-Gample.create!(game_id: 2, people_id: 5, role: "placeholder")
+Gample.create!(game_id: 2, person_id: 5, role: "placeholder")
 
-Gample.create!(game_id: 3, people_id: 3, role: "placeholder")
+Gample.create!(game_id: 3, person_id: 3, role: "placeholder")
 
-Gample.create!(game_id: 3, people_id: 6, role: "placeholder")
+Gample.create!(game_id: 3, person_id: 6, role: "placeholder")
 
-Gample.create!(game_id: 4, people_id: 1, role: "placeholder")
+Gample.create!(game_id: 4, person_id: 1, role: "placeholder")
 
-Gample.create!(game_id: 4, people_id: 2, role: "placeholder")
+Gample.create!(game_id: 4, person_id: 2, role: "placeholder")
 
-Gample.create!(game_id: 4, people_id: 3, role: "placeholder")
+Gample.create!(game_id: 4, person_id: 3, role: "placeholder")
 
-Gample.create!(game_id: 5, people_id: 4, role: "placeholder")
+Gample.create!(game_id: 5, person_id: 4, role: "placeholder")
 
-Gample.create!(game_id: 5, people_id: 5, role: "placeholder")
+Gample.create!(game_id: 5, person_id: 5, role: "placeholder")
 
-Gample.create!(game_id: 5, people_id: 6, role: "placeholder")
+Gample.create!(game_id: 5, person_id: 6, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 1, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 1, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 2, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 2, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 3, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 3, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 4, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 4, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 5, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 5, role: "placeholder")
 
-Gample.create!(game_id: 6, people_id: 6, role: "placeholder")
+Gample.create!(game_id: 6, person_id: 6, role: "placeholder")
 
 puts "I really hate how we have to do the seeds for these relations...   Ps, here is 18 gamples"
 
