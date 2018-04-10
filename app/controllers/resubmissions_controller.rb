@@ -1,0 +1,2 @@
+class ResubmissionsController < ApplicationController
+end
