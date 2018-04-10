@@ -1,0 +1,8 @@
+<div class="form-group nested-fields">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :image %>
+   	<%= f.file_field :image %>
+	<%= link_to_remove_association 'Remove Gallery Image', f %>
+
+</div>
