@@ -9,5 +9,5 @@ access admin: [:profile, :admin], user: {except: [:admin]}
   def admin
 
   end
-  
+
 end
