@@ -26,6 +26,9 @@ class GamesController < ApplicationController
   end
 
   def show
+    @chargams = CharactersGame.where(game_id: @game.id)
+    @characters = Character.all
+
     @gamplats = Gamplat.where(game_id: @game.id)
     @gamples = Gample.where(game_id: @game.id)
     @platforms = Platform.all

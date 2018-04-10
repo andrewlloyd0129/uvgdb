@@ -4,7 +4,10 @@ TODO:
 - gample
   • add some sort of form to make gamples
   • add roles to games/links on people and games
-- wire characters to games
+  • refactor views
+- chargams
+  • add some sort of form to make chargams
+  • rafactor views
 - in crud for games add carrierwave for photos.  One feature pic, and other pics
 - Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
 - make a new crud for resubmissions.  This is how any user can update existing things.  these will go to the admin dashboard for the admin to make the official live changes.

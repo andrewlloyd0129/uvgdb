@@ -13,3 +13,11 @@
 <% else %>
   <%= render 'shared/votelogin', thing: @character %>
 <% end %>
+
+
+<% @chargams.each do |chargam| %>
+  <% @games.where(id: chargam.game_id).each do |game| %>
+    <%= game.inspect %>
+
+  <% end %>
+<% end %>
