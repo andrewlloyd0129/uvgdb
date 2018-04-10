@@ -19,7 +19,14 @@
   <div>
     <%= link_to_add_association 'Add New Platform', f, :gamplats %>
   </div>
+  
+  <%= f.fields_for :game_gallaries do |gallary_form|  %>
+    <%= render 'game_gallary_fields', f: gallary_form %>
+  <% end %>
 
+   <div>
+    <%= link_to_add_association 'Add New Gallery Item', f, :game_gallaries %>
+  </div>
 
   <%= f.submit %>
 <% end %>
