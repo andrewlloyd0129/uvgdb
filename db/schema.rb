@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
+ActiveRecord::Schema.define(version: 20180410192346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
-
+    t.string "main_image"
   end
 
   create_table "gamplats", force: :cascade do |t|
@@ -142,5 +142,5 @@
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-
+  add_foreign_key "game_gallaries", "games"
 end

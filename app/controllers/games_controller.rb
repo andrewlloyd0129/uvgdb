@@ -65,7 +65,8 @@ class GamesController < ApplicationController
                                   :release, 
                                   :main_image,
                                   game_gallaries_attributes:
-                                    [:title, 
+                                    [ :id,
+                                      :title, 
                                       :image, 
                                       :_destroy], 
                                   gamplats_attributes: 

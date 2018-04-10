@@ -1,4 +1,4 @@
 class Gample < ApplicationRecord
-  belongs_to :games
-  belongs_to :people
+  belongs_to :games, optional: true
+  belongs_to :people, optional: true
 end
