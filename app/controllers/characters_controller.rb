@@ -38,6 +38,8 @@ class CharactersController < ApplicationController
 	end
 
 	def show
+		@chargams = CharactersGame.where(character_id: @character.id)
+		@games = Game.all
 	end
 	
 	def destroy
