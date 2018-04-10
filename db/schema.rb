@@ -10,8 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406174707) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +22,14 @@ ActiveRecord::Schema.define(version: 20180406174707) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
+  end
+
+  create_table "characters_games", force: :cascade do |t|
+    t.integer "character_id"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id", "game_id"], name: "index_characters_games_on_character_id_and_game_id"
   end
 
   create_table "game_gallaries", force: :cascade do |t|
@@ -43,7 +49,7 @@ ActiveRecord::Schema.define(version: 20180406174707) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
-    t.string "main_image"
+
   end
 
   create_table "gamplats", force: :cascade do |t|
@@ -126,5 +132,5 @@ ActiveRecord::Schema.define(version: 20180406174707) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  add_foreign_key "game_gallaries", "games"
+
 end

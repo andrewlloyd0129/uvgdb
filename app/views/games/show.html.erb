@@ -22,11 +22,20 @@
 <% end %>
 </div>
 
-<div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
 
-
+<h3> People who worked on game</h3>
 <% @gamples.each do |gample| %>
   <% @peoples.where(id: gample.person_id).each do |people| %>
     <%= people.name %> - 
   <% end %>
 <% end %>
+
+
+<h3> characters featured in game</h3>
+<% @chargams.each do |chargam| %>
+  <% @characters.where(id: chargam.character_id).each do |character| %>
+    <%= character.name %> - 
+  <% end %>
+<% end %>
+
+<div><%= link_to "Own this game and want to trade it for another?", pages_hiBrayden_path, class: "btn btn-primary" %></div>
