@@ -1,0 +1,2 @@
+class Resubmission < ApplicationRecord
+end

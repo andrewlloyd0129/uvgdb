@@ -1,0 +1,7 @@
+<h1>Resubmissions</h1>
+<h3>One day when matt makes my admin dashboard work put this view in there</h3>
+
+
+<% @resubmissions.each do |resub| %>
+  <%= link_to resub.title, resubmission_path(resub) %>
+<% end %>

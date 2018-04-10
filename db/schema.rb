@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,7 +50,8 @@
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
-
+    t.string "main_image"
+    t.index ["platforms_id"], name: "index_games_on_platforms_id"
   end
 
   create_table "gamplats", force: :cascade do |t|
@@ -90,6 +92,14 @@
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
+  end
+
+  create_table "resubmissions", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "studios", force: :cascade do |t|

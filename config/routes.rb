@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :resubmissions
   resources :game_gallaries
   resources :global_searches
   namespace :user do
