@@ -20,7 +20,6 @@ TODO:
     • Profile Pic
     • Bio
     • Info
-  • Favorited
   - Personal games
     • Story Beaten
     • 100% Complete
@@ -29,6 +28,7 @@ TODO:
     • Consoles owned
   • Reviews
   • Settings
+  - refactor logic
 - Badges
 - Admin Dashboard page
   • Pending content for review
@@ -91,3 +91,5 @@ TODO:
     •should have creator/artist as well as a link for the creator/artist webpage
   - Build out gamplats for fan arts to games
   - fan arts should be approved by an admin to avoid explicit content (weston doesnt want to see Cortana's blue boobs)
+
+  Weston suck Cock

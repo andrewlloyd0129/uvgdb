@@ -1,2 +1,10 @@
 <h1>Profile</h1>
 
+<% current_user.find_up_voted_items(:vote_scope => 'favorite').each do |item| %>
+  <% if item.has_attribute?(:name) %>
+    <%= link_to "#{item.name}", send("#{item.class.name.downcase}_path", item.id) %>
+  <% elsif item.has_attribute?('title') %>
+    <%= link_to "#{item.title}", send("#{item.class.name.downcase}_path", item.id) %>
+  <% end %>  
+<% end %>
+
