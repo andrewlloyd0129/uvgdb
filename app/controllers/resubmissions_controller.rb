@@ -1,6 +1,6 @@
 class ResubmissionsController < ApplicationController
   before_action :set_thing, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  access all: [:index, :show], user: {except: [:destroy, :update, :edit]}, admin: :all
   
   def index
     @resubmissions = Resubmission.all
@@ -11,8 +11,7 @@ class ResubmissionsController < ApplicationController
   end
 
   def create
-    @resubmission = Resubmission.new(games_params)
-    searchable
+    @resubmission = Resubmission.new(resubmission_params)
    if @resubmission.save
       redirect_to games_path
     else
@@ -28,8 +27,7 @@ class ResubmissionsController < ApplicationController
   end
 
   def update
-    if @resubmission.update(games_params)
-      searchable
+    if @resubmission.update(resubmission_params)
       @resubmission.save
       redirect_to @resubmission
     else
@@ -55,8 +53,5 @@ class ResubmissionsController < ApplicationController
     @resubmission = Resubmission.find(params[:id])
   end
   
-  def searchable
-    @resubmission.searchable = @resubmission.title + @resubmission.release.to_s + @resubmission.description
-  end
 
 end
