@@ -8,12 +8,23 @@ module ApplicationHelper
   end
 
   def img img, type
-  	if img.model.main_image?
-  		img
-  	elsif type == 'thumb'
-  		image_generator(height: '100', width: '70')
+    
+    if img.model.has_attribute?(:main_image)
+    	if img.model.main_image?
+    		return img
+      end 
+
+    elsif img.model.has_attribute?(:image)
+      if img.model.image?
+        return img
+      end 
+    end
+  	
+    if type == 'thumb'
+  		return image_generator(height: '100', width: '70')
   	elsif type == 'main'
-  		image_generator(height: '500', width: '350')
+
+  		return image_generator(height: '500', width: '350')
   	end
   end
 end
