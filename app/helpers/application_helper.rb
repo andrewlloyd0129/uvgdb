@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def img img, type
-  	if img.model.main_image? 
+  	if img
   		img
   	elsif type == 'thumb'
   		image_generator(height: '100', width: '70')
