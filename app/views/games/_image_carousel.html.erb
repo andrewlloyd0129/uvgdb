@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 H-500">
+      <div class="carousel slide" id="carousel-928257">
+        <ol class="carousel-indicators">
+          <li class="active" data-slide-to="0" data-target="#carousel-928257">
+          </li>
+          
+          <% @game.game_gallaries.length.times do |i| %>
+            <li data-slide-to="<% i %>" data-target="#carousel-928257">
+            </li>
+          <% end %>
+          
+        </ol>
+        <div class="carousel-inner custom-row">
+            <div class="item active">
+              <div> <%= image_tag(img(@game.main_image, 'main'), size: "350x500", class: "center-block gallery-img") %></div>
+            <div class="carousel-caption">
+              <h4>
+                <p></p>
+              </h4>
+              <p>
+              </p>
+            </div>
+          </div>
+        <% @game.game_gallaries.each do |gallery_item|  %>
+          <div class="item">
+              <div> <%= image_tag(img(gallery_item.image, 'main'),class: "center-block gallery-img") %></div>
+            <div class="carousel-caption">
+              <h4>
+                <p><%= gallery_item.title %></p>
+              </h4>
+              <p>
+                <%= gallery_item.info %>
+              </p>
+            </div>
+          </div>
+        <% end %>
+        </div> 
+            <a class="left carousel-control" href="#carousel-928257" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a> 
+            <a class="right carousel-control" href="#carousel-928257" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+      </div>
+    </div>
+  </div>
+</div>
