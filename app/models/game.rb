@@ -8,6 +8,9 @@ class Game < ApplicationRecord
   acts_as_votable
   validates_presence_of :release, :title, :description
 
+  has_many :user_game_statuses
+  has_many :users, through: :user_game_statuses
+
   has_many :gamples
   has_many :people, through: :gamples
 

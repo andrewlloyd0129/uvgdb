@@ -91,5 +91,3 @@ TODO:
     •should have creator/artist as well as a link for the creator/artist webpage
   - Build out gamplats for fan arts to games
   - fan arts should be approved by an admin to avoid explicit content (weston doesnt want to see Cortana's blue boobs)
-
-  Weston suck Cock
