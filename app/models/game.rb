@@ -9,7 +9,7 @@ class Game < ApplicationRecord
   validates_presence_of :release, :title, :description
 
   has_many :gamples
-  has_many :people, through: :gamples
+  has_many :people, :through => :gamples
 
 
   has_many :gamplats

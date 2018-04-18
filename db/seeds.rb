@@ -192,3 +192,5 @@ CharactersGame.create!(character_id: 78, game_id: 5)
 CharactersGame.create!(character_id: 5, game_id: 6)
 puts "7 characters_games"
 
+10.times do |it|
+Resubmission.create!(title: "im editing a thing ")

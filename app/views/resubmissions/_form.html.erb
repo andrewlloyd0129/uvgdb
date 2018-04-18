@@ -1,0 +1,16 @@
+<%= form_for @resubmission do |f| %>
+  <%= f.label :title, "what are you editing" %>
+  <%= f.text_field :title %> 
+  <br>
+
+  <%= f.label :description, "what changes do you want to make" %>
+  <%= f.text_area :description %>
+  <br>
+
+  <%= f.label :email %>
+  <%= f.text_field :email, :value => current_user.email, :readonly => true %>
+  <br>
+
+   <%= f.submit 'this is my label', :class => 'btn btn-primary'  %>
+
+<% end %>
