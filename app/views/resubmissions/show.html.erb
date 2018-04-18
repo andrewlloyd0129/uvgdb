@@ -1,0 +1,19 @@
+<h1>Resubmissions View</h1>
+
+<h3>What they want to change</h3>
+<%= @resubmission.title %>
+
+<h3>The change they want to make</h3>
+<%= @resubmission.description %>
+
+<h3>Submitted By</h3>
+<div><%= @resubmission.email %></div>
+
+<div class='btn btn-warning' >If changes were made, click here to delete this resubmission and notify the Submitter<%= link_to "here", resubmission_path %></div>
+
+<div class='btn btn-warning' >If changes were rejected, click here to delete this resubmission and notify the Submitter<%= link_to "here", resubmission_path %></div>
+
+<div>wow...  i made some ugly ass buttons...</div>
+
+<%= link_to "edit", edit_resubmission_path %>
+

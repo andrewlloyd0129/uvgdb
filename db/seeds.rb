@@ -173,6 +173,7 @@ Gample.create!(game_id: 6, person_id: 5, role: "placeholder")
 
 Gample.create!(game_id: 6, person_id: 6, role: "placeholder")
 
+
 puts "I really hate how we have to do the seeds for these relations...   Ps, here is 18 gamples"
 
 
@@ -203,3 +204,7 @@ UserGameStatus.create!(user_id: 2, game_id: 3, status: 2)
 UserGameStatus.create!(user_id: 2, game_id: 4, status: 3)
 
 puts "8 user_game_status"
+
+10.times do |it|
+Resubmission.create!(title: "im editing a thing ")
+

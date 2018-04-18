@@ -90,9 +90,10 @@ class GamesController < ApplicationController
                                   :release, 
                                   :main_image,
                                   game_gallaries_attributes:
-                                    [:title, 
-                                     :image, 
-                                     :_destroy], 
+                                    [ :id,
+                                      :title, 
+                                      :image, 
+                                      :_destroy], 
                                   gamplats_attributes: 
                                     [:id, 
                                      :platform_id, 

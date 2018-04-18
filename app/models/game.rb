@@ -12,7 +12,7 @@ class Game < ApplicationRecord
   has_many :users, through: :user_game_statuses
 
   has_many :gamples
-  has_many :people, through: :gamples
+  has_many :people, :through => :gamples
 
 
   has_many :gamplats

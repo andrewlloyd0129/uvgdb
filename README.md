@@ -5,13 +5,17 @@ TODO:
   • add some sort of form to make gamples
   • add roles to games/links on people and games
   • refactor views
+
 - chargams
   • add some sort of form to make chargams
   • rafactor views
-- in crud for games add carrierwave for photos.  One feature pic, and other pics
+
 - Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
+
 - make a new crud for resubmissions.  This is how any user can update existing things.  these will go to the admin dashboard for the admin to make the official live changes.
+
 - add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live
+
 - wire people to studios (people should have a list of studios they worked for)
 
 *USERS*
@@ -51,13 +55,6 @@ TODO:
   • creates a resubmission crud sends to admin
   • admin sees resubmission, if its approved starts an edit on existing game
   • publhises it
-- Form for new resubmission
-  • tb title
-  • what it is (game, palt etc)
-  • link to it - auto add
-  • text box for what they want to change
-  • date 
-  • user who submitted it 
 
 *Nav Bar*
 - Dropdown menu
