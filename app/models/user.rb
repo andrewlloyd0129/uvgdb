@@ -1,5 +1,8 @@
 class User < ApplicationRecord
 
+  has_many :user_game_statuses
+  has_many :games, through: :user_game_statuses
+
   acts_as_voter
 
   ############################################################################################

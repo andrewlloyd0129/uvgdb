@@ -17,6 +17,12 @@
 <% end %>
 </div>
 
+<div>
+  <%= link_to "Wishlist", toggle_wishlist_game_path, class: 'btn btn-primary'  %>
+  <%= link_to "Owned", toggle_owned_game_path, class: 'btn btn-success'  %>
+  <%= link_to "Beaten", toggle_beaten_game_path, class: 'btn btn-warning'  %>
+  <%= link_to "Completed", toggle_completed_game_path, class: 'btn btn-danger'  %>
+</div>
 
 <h3> People who worked on game</h3>
 <% @gamples.each do |gample| %>
