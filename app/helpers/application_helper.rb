@@ -16,4 +16,5 @@ module ApplicationHelper
   		image_generator(height: '500', width: '350')
   	end
   end
+
 end

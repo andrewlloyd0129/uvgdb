@@ -1,5 +1,5 @@
 <%= form_for @resubmission do |f| %>
-  <%= f.label :title, "what are you editing" %>
+  <%= f.label :title, "what do you wish to edit" %>
   <%= f.text_field :title %> 
   <br>
 
@@ -7,10 +7,20 @@
   <%= f.text_area :description %>
   <br>
 
-  <%= f.label :email %>
-  <%= f.text_field :email, :value => current_user.email, :readonly => true %>
+  <%= f.label :type_class, "The Item you are editing is a" %>
+  <%= f.text_area :type_class, :value => @character.class, :readonly => true %>
+  <br>
+
+    <%= f.label :type_title, "the text box is commented out till i can figure how to " %>
+  <%#= f.text_area :type_title :readonly => true %>
+  <br>
+
+    <%= f.label :description, "what changes do you want to make" %>
+  <%= f.text_area :description %>
   <br>
 
    <%= f.submit 'this is my label', :class => 'btn btn-primary'  %>
 
 <% end %>
+
+:title, :description, :type_class, :type_title, :type_id, :users_id)

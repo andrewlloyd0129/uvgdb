@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+
+
+
+
   resources :resubmissions
   resources :game_gallaries
   resources :global_searches
@@ -50,6 +54,7 @@ Rails.application.routes.draw do
     end
   end
 
+scope(path_names: { new: 'mattsucks'}) do
   resources :games do
     member do
       put "favorite" => "games#favorite"
@@ -59,6 +64,7 @@ Rails.application.routes.draw do
       put "dislike" => "games#dislike"
       put "undislike" => "games#undislike"
     end
+end
   end
   
   devise_for :users
