@@ -1,1 +1,1 @@
-<h3>The status of this game is "<%= instance_variable.status.titleize %>" Click <%= link_to "here", toggle_status_game_path %> to change </h3>
+<h3>The status of this game is "<%= instance_variable.status.titleize %>" Click <%= link_to "here", send("toggle_status_#{subpath}_path") %> to change </h3>
