@@ -57,6 +57,7 @@ Rails.application.routes.draw do
 scope(path_names: { new: 'mattsucks'}) do
   resources :games do
     member do
+      get :toggle_status
       put "favorite" => "games#favorite"
       put "unfavorite" => "games#unfavorite"
       put "like" => "games#like"
