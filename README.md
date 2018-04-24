@@ -33,8 +33,6 @@ TODO:
 
 
 - enums -- add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live.
- • Studios
- • People
  • Platforms
  • Characters
 

@@ -128,19 +128,19 @@ puts "10 gamplats created"
 
 
 
-Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd gay")
+Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd", status: 1)
 
-Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay")
+Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay", status: 0)
 
-Person.create!(name: "Matthew Read", bigraphy: "I guess he is alright.  The favorites and likes are pretty cool", searchable: "Matthew ReadI guess he is alright.  The favorites and likes are pretty cool")
+Person.create!(name: "Matthew Read", bigraphy: "I guess he is alright.  The favorites and likes are pretty cool", searchable: "Matthew ReadI guess he is alright.  The favorites and likes are pretty cool", status: 1)
 
-Person.create!(name: "Kenzie Lloyd", bigraphy: "I married her once", searchable: "I married her onceKenzie Lloyd")
+Person.create!(name: "Kenzie Lloyd", bigraphy: "I married her once", searchable: "I married her onceKenzie Lloyd", status: 1)
 
-Person.create!(name: "N/A", bigraphy: "If weston lonely this would be for his boyfriend", searchable: "N/AIf weston lonely this would be for his boyfriend")
+Person.create!(name: "N/A", bigraphy: "If weston lonely this would be for his boyfriend", searchable: "N/AIf weston lonely this would be for his boyfriend", status: 1)
 
-Person.create!(name: "Becca", bigraphy: "Matt and becca sitting in a tree K. I. S. S. I. N. G.", searchable: "BeccaMatt and becca sitting in a tree K. I. S. S. I. N. G.")
+Person.create!(name: "Becca", bigraphy: "Matt and becca sitting in a tree K. I. S. S. I. N. G.", searchable: "BeccaMatt and becca sitting in a tree K. I. S. S. I. N. G.", status: 0)
 
-puts "6 people created"
+puts "6 people created (whoever things they can steal my joke sucks.  Im not gay)"
 
 
 

@@ -1,9 +1,9 @@
 class PeopleController < ApplicationController
-	before_action :set_thing, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy, :toggle_status]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
-		@q = Person.search(params[:q])
+		@q = Person.published.search(params[:q])
     	@peoples = @q.result
 	end
 	def new
@@ -52,7 +52,18 @@ class PeopleController < ApplicationController
 		    params.require(:person).permit(:name, :bigraphy)
 	end
 
+	def toggle_status
+    if @people.draft?
+      @people.published!
+    elsif @people.published?
+      @people.draft!
+    end      
+    redirect_to user_dashboard_admin_path, notice:  "#{@people.name} status has been updated."
+  end
+
+
 	private
+
 	def searchable
 		@people.searchable = @people.name + @people.bigraphy
 	end

@@ -12,3 +12,9 @@
   <%= link_to studio.title, studio_path(studio) %>
   <br>
 <% end %>
+
+<h2>People Pending Approval</h2>
+<% @peoples.each do |people| %>
+  <%= link_to people.name, person_path(people) %>
+  <br>
+<% end %>

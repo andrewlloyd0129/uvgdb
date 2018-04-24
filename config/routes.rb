@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :people do
     member do
+      get :toggle_status
       put "favorite" => "people#favorite"
       put "unfavorite" => "people#unfavorite"
       put "like" => "people#like"
