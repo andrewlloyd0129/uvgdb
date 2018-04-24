@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   end
   resources :studios do
     member do
+      get :toggle_status
       put "favorite" => "studios#favorite"
       put "unfavorite" => "studios#unfavorite"
       put "like" => "studios#like"

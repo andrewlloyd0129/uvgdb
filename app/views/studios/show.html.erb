@@ -1,4 +1,5 @@
 <h2>Welcome to <%= "#{@studio.title}" %></h2>
+<%= render 'shared/status', instance_variable: @studio, subpath: 'studio' if logged_in?(:admin) %>
 
 <%= link_to "Edit Studio Listing", edit_studio_path if logged_in?(:admin) %>
 <div><%= link_to "Delete Studio Listing", @studio, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>

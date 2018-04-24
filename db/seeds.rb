@@ -19,7 +19,8 @@ puts "1 regular user created"
 8.times do |i|
   Studio.create!(	title: "Paraiso Gameing studios #{i}", 	
   					location: "MF AMERICA!!",
-  					searchable: "Paraiso Gameing studiosMF AMERICA!!")
+  					searchable: "Paraiso Gameing studiosMF AMERICA!!",
+            status: 0)
 end
 
 puts "8 studios created"

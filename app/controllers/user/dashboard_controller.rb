@@ -9,6 +9,7 @@ access admin: [:profile, :admin], user: {except: [:admin]}
 
   def admin
     @games = Game.draft
+    @studios = Studio.draft
 
   end
 

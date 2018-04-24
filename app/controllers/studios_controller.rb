@@ -1,12 +1,12 @@
 class StudiosController < ApplicationController
-	before_action :set_thing, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy, :toggle_status]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
 		q_param = params[:q]
 	    page = params[:page]
 
-	    @q = Studio.ransack q_param
+	    @q = Studio.published.ransack q_param
 	    @studios = @q.result.page(page).per(10)
 	end
 	def new
@@ -43,7 +43,17 @@ class StudiosController < ApplicationController
 	    end
 	end
 
+	def toggle_status
+    if @studio.draft?
+      @studio.published!
+    elsif @studio.published?
+      @studio.draft!
+    end      
+    redirect_to user_dashboard_admin_path, notice:  "#{@studio.title} status has been updated."
+  end
+
 	private
+
 	def set_thing
 		@studio = Studio.find(params[:id])
 	end

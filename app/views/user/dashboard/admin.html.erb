@@ -6,3 +6,9 @@
   <%= link_to game.title, game_path(game) %>
   <br>
 <% end %>
+
+<h2>Studios Pending Approval</h2>
+<% @studios.each do |studio| %>
+  <%= link_to studio.title, studio_path(studio) %>
+  <br>
+<% end %>
