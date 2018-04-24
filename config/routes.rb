@@ -57,6 +57,11 @@ Rails.application.routes.draw do
 scope(path_names: { new: 'mattsucks'}) do
   resources :games do
     member do
+      get :toggle_wishlist
+      get :toggle_owned
+      get :toggle_beaten
+      get :toggle_completed
+
       put "favorite" => "games#favorite"
       put "unfavorite" => "games#unfavorite"
       put "like" => "games#like"

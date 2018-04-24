@@ -18,6 +18,9 @@
   <li class="<%= active?(platforms_path) %>">
     <%= link_to "Platforms", platforms_path %>
   </li>
+  <li>  
+    <%= social_share_button_tag("UVGDB - #{header_generator} \n") %>
+  </li>
   <li class="dropdown pull-right">
      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
     <ul class="dropdown-menu">
@@ -39,3 +42,4 @@
     </ul>
   </li>
 </ul>
+<h1><%= header_generator %></h1>

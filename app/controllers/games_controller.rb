@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
-  before_action :set_thing, only: [:show, :edit, :update, :destroy]
+  before_action :set_thing, only: [:show, :edit, :update, :destroy, :gamtus_maker]
+  before_action :set_gamtus, only: [:show, :toggle_wishlist, :toggle_owned, :toggle_beaten, :toggle_completed]
   access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
   
   def index
@@ -57,6 +58,30 @@ class GamesController < ApplicationController
     end
   end
 
+  def toggle_wishlist
+    gamtus_maker
+    @gamtus.update(status: 'wishlist')
+    redirect_to game_path, notice: 'game has been added to your wishlist'
+  end
+
+  def toggle_owned
+    gamtus_maker
+    @gamtus.update(status: 'owned')
+    redirect_to game_path, notice: 'game has been added to your owned list'
+  end
+
+  def toggle_beaten
+    gamtus_maker
+    @gamtus.update(status: 'beaten')
+    redirect_to game_path, notice: 'game has been added to your beaten list'
+  end
+
+  def toggle_completed
+    gamtus_maker
+    @gamtus.update(status: 'completed')
+    redirect_to game_path, notice: 'game has been added to your completed list'
+  end
+
   private
 
   def games_params
@@ -71,8 +96,8 @@ class GamesController < ApplicationController
                                       :_destroy], 
                                   gamplats_attributes: 
                                     [:id, 
-                                      :platform_id, 
-                                      :_destroy])
+                                     :platform_id, 
+                                     :_destroy])
   end
 
   def set_thing
@@ -83,4 +108,14 @@ class GamesController < ApplicationController
     @game.searchable = @game.title + @game.release.to_s + @game.description
   end
 
+  def set_gamtus
+    set_thing
+    @gamtus = UserGameStatus.find_by user_id: current_user.id, game_id: @game.id
+  end
+
+  def gamtus_maker
+    if @gamtus == nil
+      @gamtus = UserGameStatus.create(user_id: current_user.id, game_id: @game.id)
+    end
+  end
 end
