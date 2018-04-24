@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20180418170607) do
+ActiveRecord::Schema.define(version: 20180418181209) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -96,18 +95,19 @@ ActiveRecord::Schema.define(version: 20180418170607) do
     t.text "searchable"
   end
 
-  create_table "studios", force: :cascade do |t|
+
+  create_table "resubmissions", force: :cascade do |t|
     t.string "title"
-    t.string "location"
+    t.text "description"
+    t.string "type_class"
+    t.integer "type_id"
+    t.string "type_title"
+    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "searchable"
+    t.index ["users_id"], name: "index_resubmissions_on_users_id"
   end
 
-  create_table "user_game_statuses", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "game_id"
-    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id", "game_id"], name: "index_user_game_statuses_on_user_id_and_game_id"
@@ -146,4 +146,5 @@ ActiveRecord::Schema.define(version: 20180418170607) do
   end
 
   add_foreign_key "game_gallaries", "games"
+
 end

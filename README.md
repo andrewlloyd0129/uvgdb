@@ -10,9 +10,18 @@ TODO:
   • add some sort of form to make chargams
   • rafactor views
 
-- Gamplat I finally finsihed the freaking gamplat.   THe dropdown for platforms works but its ugly one day when my brain isnt fried from the mother freaking gamplat (and probably when prophet is here to help me) I will mess with an empty value and a typeable box to search through it
+- Gamplat
+  • make drop down pretty and searchable 
 
-- make a new crud for resubmissions.  This is how any user can update existing things.  these will go to the admin dashboard for the admin to make the official live changes.
+- Resubmissions
+ • look into duplicating records instead of making a resubmission crud: this link appears to help
+ • http://dmitrypol.github.io/2016/11/15/rails-clone-records.html
+ • re re nuke resubmissions crud assuming the duplications works.
+ • dublicated records will go to the admin dashboard as a draft
+ • highlight changes in yellow
+ • when approved, delete the original record and duplicate status is live.  
+ • make it so the id of the original stays the id of the new one so gamplats dont get jacked up
+
 
 - add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live
 
@@ -21,7 +30,7 @@ TODO:
 *USERS*
 - User profile page
   - Account
-    • Profile Pic
+     Profile Pic
     • Bio
     • Info
   - Personal games
@@ -79,6 +88,8 @@ TODO:
 - On games show page, if game was released in past x years, add month to year
 - Implement functinoality so when the user goes back to a page it carries over their search for the page (I.e search halo on games page, click halo 2 show page, go click games page goes back to search for halo)
 - I found this library for carrierwaive and stuff for pictures and videos.  https://rails.devcamp.com/trails/dissecting-rails-5/campsites/images-videos-rails-5
+- social media links
+
 
 
 *Fan Art*
@@ -88,3 +99,4 @@ TODO:
     •should have creator/artist as well as a link for the creator/artist webpage
   - Build out gamplats for fan arts to games
   - fan arts should be approved by an admin to avoid explicit content (weston doesnt want to see Cortana's blue boobs)
+

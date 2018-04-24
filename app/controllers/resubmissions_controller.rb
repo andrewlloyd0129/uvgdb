@@ -37,16 +37,16 @@ class ResubmissionsController < ApplicationController
 
   def destroy
     if @resubmission.destroy
-      redirect_to games_path, notice: 'Your post was edited successfully'
+      redirect_to games_path, notice: 'Your resubmission was deleted successfully'
     else
-      render :show, notice: 'penis'
+      render :show, notice: 'error deleting your resubmission'
     end
   end
 
   private
 
   def resubmission_params
-    params.require(:resubmission).permit(:title, :description, :email)
+    params.require(:resubmission).permit(:title, :description, :type_class, :type_title, :type_id, :users_id)
   end
 
   def set_thing
