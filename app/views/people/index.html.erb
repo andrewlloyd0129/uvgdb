@@ -22,8 +22,8 @@
 	</ul>
 </div>
 <% end %>
+<div><%= link_to "Clear Search", people_path %></div>
 <div><%= link_to "Create New Peoples", new_person_path if logged_in?(:admin) %></div>
- <div><%= link_to "Clear Search", people_path %></div>
 <hr>
 
 <table class="table">
