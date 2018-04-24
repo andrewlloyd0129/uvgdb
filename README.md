@@ -1,5 +1,14 @@
 TODO:
 
+*MVP*
+- HomePage
+- Styles
+- Images on more than games
+- make sure crap aint broke
+- 100% all gamples
+- little things
+
+
 *CRUD*
 - gample
   • add some sort of form to make gamples

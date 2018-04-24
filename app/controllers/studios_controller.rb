@@ -30,7 +30,7 @@ class StudiosController < ApplicationController
 	    	@studio.save
 	      redirect_to @studio
 	    else
-	      render :edit
+	      render :edit, notice: 'Your studio could not be  edited'
 	    end
 	end
 	def show
@@ -39,7 +39,7 @@ class StudiosController < ApplicationController
 		if @studio.destroy
       		redirect_to studios_path, notice: 'Your studio was edited successfully'
 	    else
-	      render :show
+	      render :show, notice: 'Your studio could not be deleted'
 	    end
 	end
 

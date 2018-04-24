@@ -41,7 +41,7 @@ class PeopleController < ApplicationController
 		if @people.destroy
       		redirect_to people_path, notice: 'Your people was destroyed successfully'
 	    else
-	      render :show, notice: 'penis'
+	      render :show, notice: 'Your people could not be destroyed'
 	    end
 	end
 

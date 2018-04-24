@@ -44,7 +44,7 @@ class PlatformsController < ApplicationController
     if @platform.destroy
           redirect_to platforms_path, notice: 'Your platform was deleted successfully'
       else
-        render :show, notice: 'penis'
+        render :show, notice: 'Your platform could not be  deleted'
       end
   end
   private
