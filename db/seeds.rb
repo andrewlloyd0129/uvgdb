@@ -84,22 +84,26 @@ puts "6 games created"
 Platform.create!(	name: "xbox", 
 					release_date: "1994-01-29", 
 					brand: "Microsoft",
-					searchable: "xbox1994-01-29Microsoft")
+					searchable: "xbox1994-01-29Microsoft",
+          status: 0)
 
 Platform.create!(	name: "PlayStation", 
 					release_date: "1995-06-15", 
 					brand: "Sony",
-					searchable: "Playstation1995-06-15Sony")
+					searchable: "Playstation1995-06-15Sony",
+          status: 0)
 
 Platform.create!(	name: "Windows", 
 					release_date: "1995-05-23", 
 					brand: "Microsoft",
-					searchable: "Windows1995-05-23Microsoft")
+					searchable: "Windows1995-05-23Microsoft",
+          status: 1)
 
 Platform.create!(	name: "Android", 
 					release_date: "1992-08-17", 
 					brand: "Google",
-					searchable: "Android1992-08-17Goolge")
+					searchable: "Android1992-08-17Goolge",
+          status: 1)
 
 puts "4 platforms created"
 

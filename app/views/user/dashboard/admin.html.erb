@@ -18,3 +18,9 @@
   <%= link_to people.name, person_path(people) %>
   <br>
 <% end %>
+
+<h2>Platform Pending Approval</h2>
+<% @platforms.each do |platform| %>
+  <%= link_to platform.name, platform_path(platform) %>
+  <br>
+<% end %>

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   end
   resources :platforms do
     member do
+      get :toggle_status
       put "favorite" => "platforms#favorite"
       put "unfavorite" => "platforms#unfavorite"
       put "like" => "platforms#like"
@@ -32,6 +33,7 @@ Rails.application.routes.draw do
   end
   resources :characters do
     member do
+      get :toggle_status
       put "favorite" => "characters#favorite"
       put "unfavorite" => "characters#unfavorite"
       put "like" => "characters#like"
