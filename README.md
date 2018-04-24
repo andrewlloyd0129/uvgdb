@@ -23,7 +23,12 @@ TODO:
  • make it so the id of the original stays the id of the new one so gamplats dont get jacked up
 
 
-- add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live
+- enums -- add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live.
+ • Studios
+ • People
+ • Platforms
+ • Characters
+
 
 - wire people to studios (people should have a list of studios they worked for)
 
@@ -53,17 +58,6 @@ TODO:
   • 100% Complete
   • Owned but not played
   • Wishlist
-- on view page, admin can see links to edit and delete, users can see link for new resubmissions, not signed in sees nothing
-- User creates game
-  • enum: publihsed, draft
-  • goes to admin dash
-  • admin changes if needed
-  • added pushes approved
-  • change enum to published
-- User updates a game
-  • creates a resubmission crud sends to admin
-  • admin sees resubmission, if its approved starts an edit on existing game
-  • publhises it
 
 *Nav Bar*
 - Dropdown menu
@@ -98,5 +92,4 @@ TODO:
     •fan arts should have an image
     •should have creator/artist as well as a link for the creator/artist webpage
   - Build out gamplats for fan arts to games
-  - fan arts should be approved by an admin to avoid explicit content (weston doesnt want to see Cortana's blue boobs)
-
+  - fan arts should be approved by an admin to avoid explicit content
