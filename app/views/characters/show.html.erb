@@ -1,4 +1,5 @@
 <h2>Welcome to <%= "#{@character.name}" %></h2>
+<%= render 'shared/status', instance_variable: @character, subpath: 'character' if logged_in?(:admin) %>
 
 <div><%= link_to "Edit Charater", edit_character_path if logged_in?(:admin) %></div>
 <div><%= link_to "Submit Charater Changes", new_resubmission_path(:type_title => @character.name, :type_class => @character.class) if logged_in?(:user) %></div>

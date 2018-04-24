@@ -13,6 +13,7 @@ access admin: [:profile, :admin], user: {except: [:admin]}
     @studios = Studio.draft
     @peoples = Person.draft
     @platforms = Platform.draft
+    @characters = Character.draft
   end
 
 end

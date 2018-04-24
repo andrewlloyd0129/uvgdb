@@ -24,3 +24,9 @@
   <%= link_to platform.name, platform_path(platform) %>
   <br>
 <% end %>
+
+<h2>Characters Pending Approval</h2>
+<% @characters.each do |character| %>
+  <%= link_to character.name, character_path(character) %>
+  <br>
+<% end %>
