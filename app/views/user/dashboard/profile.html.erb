@@ -8,3 +8,54 @@
   <% end %>  
 <% end %>
 
+
+<div>
+  <h4>Wishlist</h4>
+
+  <% @usergamestatus.where(status: 0).each  do |gamtus| %>
+    <% @games.where(id: gamtus.game_id).each do |game| %>
+      <%= link_to "#{game.title}", game_path(game) %>
+      <br>
+    <% end %>
+  <% end %>
+
+</div>
+
+<div>
+  <h4>Owned</h4>
+
+  <% @usergamestatus.where(status: 1).each  do |gamtus| %>
+    <% @games.where(id: gamtus.game_id).each do |game| %>
+      <%= link_to "#{game.title}", game_path(game) %>
+      <br>
+    <% end %>
+  <% end %>
+
+</div>
+
+<div>
+  <h4>Beaten</h4>
+
+  <% @usergamestatus.where(status: 2).each  do |gamtus| %>
+    <% @games.where(id: gamtus.game_id).each do |game| %>
+      <%= link_to "#{game.title}", game_path(game) %>
+      <br>
+    <% end %>
+  <% end %>
+
+</div>
+
+<div>
+  <h4>Completed</h4>
+
+  <% @usergamestatus.where(status: 3).each  do |gamtus| %>
+    <% @games.where(id: gamtus.game_id).each do |game| %>
+      <%= link_to "#{game.title}", game_path(game) %>
+      <br>
+    <% end %>
+  <% end %>
+
+</div>
+
+
+

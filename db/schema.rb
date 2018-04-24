@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180423190447) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 20180423190447) do
     t.text "searchable"
   end
 
+
   create_table "resubmissions", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -107,12 +109,9 @@ ActiveRecord::Schema.define(version: 20180423190447) do
     t.index ["users_id"], name: "index_resubmissions_on_users_id"
   end
 
-  create_table "studios", force: :cascade do |t|
-    t.string "title"
-    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "searchable"
+    t.index ["user_id", "game_id"], name: "index_user_game_statuses_on_user_id_and_game_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -148,5 +147,5 @@ ActiveRecord::Schema.define(version: 20180423190447) do
   end
 
   add_foreign_key "game_gallaries", "games"
-  add_foreign_key "resubmissions", "users", column: "users_id"
+
 end
