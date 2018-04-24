@@ -1,4 +1,5 @@
 <h1><%="Here is a game show page for  #{@game.title}!!"%></h1>
+<%= render 'shared/status', instance_variable: @game, subpath: 'game' if logged_in?(:admin) %>
 <%= link_to "Edit Game Listing", edit_game_path if logged_in?(:admin) %>
 <div><%= link_to "Delete Game Listing", @game, method: :delete, data:  {confirm: "Are you sure you want to delete?"} if logged_in?(:admin) %></div>
 <div>(<%= @game.release.year %>)</div>

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-
-
-
-
   resources :resubmissions
   resources :game_gallaries
   resources :global_searches
@@ -57,11 +53,11 @@ Rails.application.routes.draw do
 scope(path_names: { new: 'mattsucks'}) do
   resources :games do
     member do
+      get :toggle_status
       get :toggle_wishlist
       get :toggle_owned
       get :toggle_beaten
       get :toggle_completed
-
       put "favorite" => "games#favorite"
       put "unfavorite" => "games#unfavorite"
       put "like" => "games#like"
