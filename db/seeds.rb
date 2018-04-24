@@ -196,6 +196,7 @@ CharactersGame.create!(character_id: 3, game_id: 5)
 CharactersGame.create!(character_id: 78, game_id: 5)
 
 CharactersGame.create!(character_id: 5, game_id: 6)
+
 puts "7 characters_games"
 
 
@@ -210,5 +211,3 @@ UserGameStatus.create!(user_id: 2, game_id: 3, status: 2)
 UserGameStatus.create!(user_id: 2, game_id: 4, status: 3)
 
 puts "8 user_game_status"
-
-
