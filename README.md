@@ -1,5 +1,11 @@
 TODO:
 
+Wednesday
+  - [ ] Admin dashboard
+    • [ ] Users list page
+    • [ ] Create new things
+    •? [ ] Sub nav bar
+  
 *CRUD*
 - gample
   • add some sort of form to make gamples
@@ -32,37 +38,50 @@ TODO:
 
 - wire people to studios (people should have a list of studios they worked for)
 
-*USERS*
+*USERS
 - User profile page
-  - Account
-     Profile Pic
-    • Bio
-    • Info
-  - Personal games
-    • Story Beaten
-    • 100% Complete
-    • Games owned but not played
-    • Wishlist
-    • Consoles owned
-  • Reviews
-  • Settings
-  - refactor logic
-- Badges
-- Admin Dashboard page
-  • Pending content for review
-    - two parts, one submitted resubmitions
-    - one for new content submissions for drafts
-  • Edit users
-- Users can add games as:
-  • Story Beaten
-  • 100% Complete
-  • Owned but not played
-  • Wishlist
+  -[ ] Account
+    •[ ] Profile Pic
+    •[ ] Bio
+    •[ ] Info
+  -[ ] Personal games
+    •[X] Story Beaten
+    •[X] 100% Complete
+    •[X] Games owned but not played
+    •[X] Wishlist
+    •[ ] Consoles owned
+  •[ ] Reviews
+  •[ ] Settings
+  -[ ] refactor logic
+-[ ] Badges
+-[ ] Admin Dashboard page
+  •[ ] Pending content for review
+    -[ ] two parts, one submitted resubmitions
+    -[ ] one for new content submissions for drafts
+  •[ ] Edit users
+-[X] Users can add games as:
+  •[X] Story Beaten
+  •[X] 100% Complete
+  •[X] Owned but not played
+  •[X] Wishlist
+-[ ] on view page, admin can see links to edit and delete, users can see link for new resubmissions, not signed in sees nothing
+-[ ] User creates game
+  •[ ] enum: publihsed, draft
+  •[ ] goes to admin dash
+  •[ ] admin changes if needed
+  •[ ] added pushes approved
+  •[ ] change enum to published
+-[ ] User updates a game
+  •[ ] creates a resubmission crud sends to admin
+  •[ ] admin sees resubmission, if its approved starts an edit on existing game
+  •[ ] publhises it
+
 
 *Nav Bar*
-- Dropdown menu
-  • User page link
-  • Admin page link
+- -
+-[X] Dropdown menu
+  •[X] User page link
+  •[X] Admin page link
 - Logo for uvgdb
 - Search bar
   • Dropdown menu for specific search
