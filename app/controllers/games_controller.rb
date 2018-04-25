@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_thing, only: [:show, :edit, :update, :destroy, :gamtus_maker]
+  before_action :set_thing, only: [:show, :edit, :update, :destroy, :gamtus_maker, :toggle_status]
   before_action :set_gamtus, only: [:show, :toggle_wishlist, :toggle_owned, :toggle_beaten, :toggle_completed]
   access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
   
@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     q_param = params[:q]
       page = params[:page]
 
-      @q = Game.ransack q_param
+      @q = Game.published.ransack q_param
       @games = @q.result.page(page).per(10)
   end
 
@@ -54,10 +54,20 @@ class GamesController < ApplicationController
     if @game.destroy
       redirect_to games_path, notice: 'Your post was edited successfully'
     else
-      render :show, notice: 'penis'
+      render :show, notice: 'Your edit failed'
     end
   end
 
+
+  def toggle_status
+    if @game.draft?
+      @game.published!
+    elsif @game.published?
+      @game.draft!
+    end      
+    redirect_to user_dashboard_admin_path, notice:  "#{@game.title} status has been updated."
+  end
+  
   def toggle_wishlist
     gamtus_maker
     @gamtus.update(status: 'wishlist')

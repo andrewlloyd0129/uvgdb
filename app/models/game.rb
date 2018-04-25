@@ -1,4 +1,6 @@
 class Game < ApplicationRecord
+  enum status: { draft: 0, published: 1}
+
 	has_many :game_gallaries
 
 	accepts_nested_attributes_for :game_gallaries, 
@@ -26,4 +28,6 @@ class Game < ApplicationRecord
   accepts_nested_attributes_for :gamplats, 
                                 allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['platform_id'].blank? }
+
+
 end

@@ -46,7 +46,7 @@ class CharactersController < ApplicationController
 		if @character.destroy
       		redirect_to characters_path, notice: 'Your character was destroyed successfully'
 	    else
-	      render :show, notice: 'penis'
+	      render :show, notice: 'Your character could not be destroyed'
 	    end
 	end
 

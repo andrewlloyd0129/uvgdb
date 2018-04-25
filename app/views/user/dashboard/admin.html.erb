@@ -1,1 +1,8 @@
 <h1>This will be the admin dashboard</h1>
+
+
+<h2>Games Pending Approval</h2>
+<% @games.each do |game| %>
+  <%= link_to game.title, game_path(game) %>
+  <br>
+<% end %>
