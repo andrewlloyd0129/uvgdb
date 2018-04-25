@@ -120,7 +120,9 @@ class GamesController < ApplicationController
 
   def set_gamtus
     set_thing
+    if user_signed_in?  
     @gamtus = UserGameStatus.find_by user_id: current_user.id, game_id: @game.id
+    end
   end
 
   def gamtus_maker

@@ -19,6 +19,11 @@
 </div>
 
 <div>
+  <div>
+    <% if user_signed_in? %>
+      This game is in your <%= @gamtus.status %> category
+    <% end %>
+  </div>
   <%= link_to "Wishlist", toggle_wishlist_game_path, class: 'btn btn-primary'  %>
   <%= link_to "Owned", toggle_owned_game_path, class: 'btn btn-success'  %>
   <%= link_to "Beaten", toggle_beaten_game_path, class: 'btn btn-warning'  %>
