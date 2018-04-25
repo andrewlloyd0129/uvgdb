@@ -1,12 +1,12 @@
 class CharactersController < ApplicationController
-	before_action :set_thing, only: [:show, :edit, :update, :destroy]
+	before_action :set_thing, only: [:show, :edit, :update, :destroy, :toggle_status]
 	access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
 	def index
 		q_param = params[:q]
 	    page = params[:page]
 
-	    @q = Character.ransack q_param
+	    @q = Character.published.ransack q_param
 	    @characters = @q.result.page(page).per(10)
 	end
 
@@ -50,12 +50,28 @@ class CharactersController < ApplicationController
 	    end
 	end
 
+
 	def set_thing
 		@character = Character.find(params[:id])
 	end
+
 	def character_params
 		    params.require(:character).permit(:name, :biography, :age, :home_town, :first_appearence)
 	end
+
+
+
+	def toggle_status
+    if @character.draft?
+      @character.published!
+    elsif @character.published?
+      @character.draft!
+    end      
+    redirect_to user_dashboard_admin_path, notice:  "#{@character.name} status has been updated."
+  end
+
+	private
+
 	def searchable
 		  @character.searchable = @character.name + @character.biography + @character.age.to_s + @character.home_town.to_s + @character.first_appearence 
 	end

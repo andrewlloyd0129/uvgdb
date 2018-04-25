@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :people do
     member do
+      get :toggle_status
       put "favorite" => "people#favorite"
       put "unfavorite" => "people#unfavorite"
       put "like" => "people#like"
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   end
   resources :platforms do
     member do
+      get :toggle_status
       put "favorite" => "platforms#favorite"
       put "unfavorite" => "platforms#unfavorite"
       put "like" => "platforms#like"
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
   end
   resources :characters do
     member do
+      get :toggle_status
       put "favorite" => "characters#favorite"
       put "unfavorite" => "characters#unfavorite"
       put "like" => "characters#like"
@@ -41,6 +44,7 @@ Rails.application.routes.draw do
   end
   resources :studios do
     member do
+      get :toggle_status
       put "favorite" => "studios#favorite"
       put "unfavorite" => "studios#unfavorite"
       put "like" => "studios#like"

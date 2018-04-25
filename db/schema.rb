@@ -11,8 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 20180424200103) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180424200103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
+    t.integer "status", default: 0
   end
 
   create_table "characters_games", force: :cascade do |t|
@@ -86,6 +85,7 @@ ActiveRecord::Schema.define(version: 20180424200103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
+    t.integer "status", default: 0
   end
 
   create_table "platforms", force: :cascade do |t|
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20180424200103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "searchable"
+    t.integer "status", default: 0
   end
 
   create_table "resubmissions", force: :cascade do |t|
@@ -109,6 +110,19 @@ ActiveRecord::Schema.define(version: 20180424200103) do
     t.index ["users_id"], name: "index_resubmissions_on_users_id"
   end
 
+  create_table "studios", force: :cascade do |t|
+    t.string "title"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "searchable"
+    t.integer "status", default: 0
+  end
+
+  create_table "user_game_statuses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "game_id"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id", "game_id"], name: "index_user_game_statuses_on_user_id_and_game_id"
@@ -148,6 +162,5 @@ ActiveRecord::Schema.define(version: 20180424200103) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  add_foreign_key "game_gallaries", "games"
-  add_foreign_key "resubmissions", "users"
+
 end

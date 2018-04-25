@@ -1,12 +1,12 @@
 class PlatformsController < ApplicationController
-    before_action :set_thing, only: [:show, :edit, :update, :destroy]
+    before_action :set_thing, only: [:show, :edit, :update, :destroy, :toggle_status]
     access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
     q_param = params[:q]
       page = params[:page]
 
-      @q = Platform.ransack q_param
+      @q = Platform.published.ransack q_param
       @platforms = @q.result.page(page).per(10)
   end
   def new
@@ -44,9 +44,19 @@ class PlatformsController < ApplicationController
     if @platform.destroy
           redirect_to platforms_path, notice: 'Your platform was deleted successfully'
       else
-        render :show, notice: 'penis'
+        render :show, notice: 'Your platform could not be  deleted'
       end
   end
+
+  def toggle_status
+    if @platform.draft?
+      @platform.published!
+    elsif @platform.published?
+      @platform.draft!
+    end      
+    redirect_to user_dashboard_admin_path, notice:  "#{@platform.name} status has been updated."
+  end
+
   private
 
     def set_thing

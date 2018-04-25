@@ -1,11 +1,23 @@
 TODO:
 
+
+*MVP*
+- HomePage
+- Styles
+- Images on more than games
+- make sure crap aint broke
+- 100% all gamples
+- little things
+
+
+
 Wednesday
   - [ ] Admin dashboard
     • [ ] Users list page
     • [ ] Create new things
     •? [ ] Sub nav bar
   
+
 *CRUD*
 - gample
   • add some sort of form to make gamples
@@ -27,13 +39,6 @@ Wednesday
  • highlight changes in yellow
  • when approved, delete the original record and duplicate status is live.  
  • make it so the id of the original stays the id of the new one so gamplats dont get jacked up
-
-
-- enums -- add enum for draft and published for all crud.  new entries by users default to draft and show up in the admin dashboard.  Admins then approve them to published and they are pushed live.
- • Studios
- • People
- • Platforms
- • Characters
 
 
 - wire people to studios (people should have a list of studios they worked for)

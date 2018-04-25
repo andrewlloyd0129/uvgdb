@@ -19,7 +19,8 @@ puts "1 regular user created"
 8.times do |i|
   Studio.create!(	title: "Paraiso Gameing studios #{i}", 	
   					location: "MF AMERICA!!",
-  					searchable: "Paraiso Gameing studiosMF AMERICA!!")
+  					searchable: "Paraiso Gameing studiosMF AMERICA!!",
+            status: 0)
 end
 
 puts "8 studios created"
@@ -27,16 +28,17 @@ puts "8 studios created"
 
 
 
-500.times do |i|
+10.times do |i|
 	Character.create!(	name: "cool character number #{i}",
 						age: i , 
 						home_town: "PantsLand", 
 						first_appearence: "game", 
 						biography: "m ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, cool bio", 
-						searchable:"cool character number #{i}#{i}PantsLandgamem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, cool bio" )
+						searchable:"cool character number #{i}#{i}PantsLandgamem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, cool bio",
+            status: 0 )
 end
 
-puts "500 Characters created (cause why not)"
+puts "10 Characters created (cause why not)"
 
 
 Game.create!(	title: "Halo", 
@@ -83,22 +85,26 @@ puts "6 games created"
 Platform.create!(	name: "xbox", 
 					release_date: "1994-01-29", 
 					brand: "Microsoft",
-					searchable: "xbox1994-01-29Microsoft")
+					searchable: "xbox1994-01-29Microsoft",
+          status: 0)
 
 Platform.create!(	name: "PlayStation", 
 					release_date: "1995-06-15", 
 					brand: "Sony",
-					searchable: "Playstation1995-06-15Sony")
+					searchable: "Playstation1995-06-15Sony",
+          status: 0)
 
 Platform.create!(	name: "Windows", 
 					release_date: "1995-05-23", 
 					brand: "Microsoft",
-					searchable: "Windows1995-05-23Microsoft")
+					searchable: "Windows1995-05-23Microsoft",
+          status: 1)
 
 Platform.create!(	name: "Android", 
 					release_date: "1992-08-17", 
 					brand: "Google",
-					searchable: "Android1992-08-17Goolge")
+					searchable: "Android1992-08-17Goolge",
+          status: 1)
 
 puts "4 platforms created"
 
@@ -127,19 +133,19 @@ puts "10 gamplats created"
 
 
 
-Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd gay")
+Person.create!(name: "Andrew Lloyd", bigraphy: "Is the best", searchable: "Is the bestAndrew Lloyd", status: 1)
 
-Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay")
+Person.create!(name: "Weston Nokes", bigraphy: "is not the best cuz im typing this in a bigraphy not a biography", searchable: "Weston Nokesis not the best cuz im typing this in a bigraphy not a biographygay", status: 0)
 
-Person.create!(name: "Matthew Read", bigraphy: "I guess he is alright.  The favorites and likes are pretty cool", searchable: "Matthew ReadI guess he is alright.  The favorites and likes are pretty cool")
+Person.create!(name: "Matthew Read", bigraphy: "I guess he is alright.  The favorites and likes are pretty cool", searchable: "Matthew ReadI guess he is alright.  The favorites and likes are pretty cool", status: 1)
 
-Person.create!(name: "Kenzie Lloyd", bigraphy: "I married her once", searchable: "I married her onceKenzie Lloyd")
+Person.create!(name: "Kenzie Lloyd", bigraphy: "I married her once", searchable: "I married her onceKenzie Lloyd", status: 1)
 
-Person.create!(name: "N/A", bigraphy: "If weston lonely this would be for his boyfriend", searchable: "N/AIf weston lonely this would be for his boyfriend")
+Person.create!(name: "N/A", bigraphy: "If weston lonely this would be for his boyfriend", searchable: "N/AIf weston lonely this would be for his boyfriend", status: 1)
 
-Person.create!(name: "Becca", bigraphy: "Matt and becca sitting in a tree K. I. S. S. I. N. G.", searchable: "BeccaMatt and becca sitting in a tree K. I. S. S. I. N. G.")
+Person.create!(name: "Becca", bigraphy: "Matt and becca sitting in a tree K. I. S. S. I. N. G.", searchable: "BeccaMatt and becca sitting in a tree K. I. S. S. I. N. G.", status: 0)
 
-puts "6 people created"
+puts "6 people created (whoever things they can steal my joke sucks.  Im not gay)"
 
 
 

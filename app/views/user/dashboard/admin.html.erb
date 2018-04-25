@@ -6,3 +6,27 @@
   <%= link_to game.title, game_path(game) %>
   <br>
 <% end %>
+
+<h2>Studios Pending Approval</h2>
+<% @studios.each do |studio| %>
+  <%= link_to studio.title, studio_path(studio) %>
+  <br>
+<% end %>
+
+<h2>People Pending Approval</h2>
+<% @peoples.each do |people| %>
+  <%= link_to people.name, person_path(people) %>
+  <br>
+<% end %>
+
+<h2>Platform Pending Approval</h2>
+<% @platforms.each do |platform| %>
+  <%= link_to platform.name, platform_path(platform) %>
+  <br>
+<% end %>
+
+<h2>Characters Pending Approval</h2>
+<% @characters.each do |character| %>
+  <%= link_to character.name, character_path(character) %>
+  <br>
+<% end %>
